@@ -13,6 +13,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Camada de Infraestrutura
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatricioSolucao.Telas", "PatricioSolucao.Telas\PatricioSolucao.Telas.csproj", "{17B877E6-4522-4817-AE53-3074E9EE1108}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testes", "Testes", "{18F1E02A-A35F-4B55-A69F-6E5C260D2C81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatricioSolucao.Dominio.Testes", "PatricioSolucao.Dominio.Testes\PatricioSolucao.Dominio.Testes.csproj", "{8EDF4429-251A-416D-BB68-93F227191BCF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1289FC11-5040-4C86-85F6-0E8BC27AF73B} = {1289FC11-5040-4C86-85F6-0E8BC27AF73B}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatricioSolucao.Infra.Dados.Testes", "PatricioSolucao.Infra.Dados.Testes\PatricioSolucao.Infra.Dados.Testes.csproj", "{C48056C2-3785-4A1D-A3F4-98DD062BBBA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatricioSolucao.Dominio", "PatricioSolucao.Dominio\PatricioSolucao.Dominio.csproj", "{1289FC11-5040-4C86-85F6-0E8BC27AF73B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatricioSolucao.Infra.Dados", "PatricioSolucao.Infra.Dados\PatricioSolucao.Infra.Dados.csproj", "{789DE313-4283-448C-88A8-B5B9E06C1D63}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 Banco de Dados", "4.1 Banco de Dados", "{FC380369-0710-4652-9D82-4700A8A3BB3F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +38,33 @@ Global
 		{17B877E6-4522-4817-AE53-3074E9EE1108}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17B877E6-4522-4817-AE53-3074E9EE1108}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17B877E6-4522-4817-AE53-3074E9EE1108}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EDF4429-251A-416D-BB68-93F227191BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EDF4429-251A-416D-BB68-93F227191BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C48056C2-3785-4A1D-A3F4-98DD062BBBA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C48056C2-3785-4A1D-A3F4-98DD062BBBA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C48056C2-3785-4A1D-A3F4-98DD062BBBA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C48056C2-3785-4A1D-A3F4-98DD062BBBA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1289FC11-5040-4C86-85F6-0E8BC27AF73B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1289FC11-5040-4C86-85F6-0E8BC27AF73B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1289FC11-5040-4C86-85F6-0E8BC27AF73B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1289FC11-5040-4C86-85F6-0E8BC27AF73B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{789DE313-4283-448C-88A8-B5B9E06C1D63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{789DE313-4283-448C-88A8-B5B9E06C1D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{789DE313-4283-448C-88A8-B5B9E06C1D63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{789DE313-4283-448C-88A8-B5B9E06C1D63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{17B877E6-4522-4817-AE53-3074E9EE1108} = {C0B01132-27F9-4908-9844-CE7507AB10AA}
+		{8EDF4429-251A-416D-BB68-93F227191BCF} = {18F1E02A-A35F-4B55-A69F-6E5C260D2C81}
+		{C48056C2-3785-4A1D-A3F4-98DD062BBBA8} = {18F1E02A-A35F-4B55-A69F-6E5C260D2C81}
+		{1289FC11-5040-4C86-85F6-0E8BC27AF73B} = {6FCA18D4-6778-407D-986E-2BBFDBEE856B}
+		{789DE313-4283-448C-88A8-B5B9E06C1D63} = {FC380369-0710-4652-9D82-4700A8A3BB3F}
+		{FC380369-0710-4652-9D82-4700A8A3BB3F} = {952DA275-AB89-4571-B07C-757F571AE5AE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8645AD62-AE9D-45FB-BBCA-0608C59CDE4C}

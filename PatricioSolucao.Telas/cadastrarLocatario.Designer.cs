@@ -233,7 +233,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "cadastrarLocatario";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Locatario";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.cadastrarLocatario_FormClosed);
             this.ResumeLayout(false);

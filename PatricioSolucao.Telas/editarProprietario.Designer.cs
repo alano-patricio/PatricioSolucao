@@ -158,6 +158,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "editarProprietario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Proprietario";
             this.ResumeLayout(false);
             this.PerformLayout();

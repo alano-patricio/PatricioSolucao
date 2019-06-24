@@ -118,6 +118,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "listarBaixarImovel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listar Imovéis";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.listarBaixarImovel_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

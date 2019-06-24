@@ -78,6 +78,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "listarBaixarProprietario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listar Proprietários";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.listarBaixarProprietario_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
