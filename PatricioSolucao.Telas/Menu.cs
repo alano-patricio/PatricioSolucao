@@ -75,7 +75,7 @@ namespace PatricioSolucao.Telas
 
         private void proprietáriosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            listarBaixarProprietario listarBaixarProprietario_ = new listarBaixarProprietario();
+            buscarProprietario listarBaixarProprietario_ = new buscarProprietario();
             this.Hide();
             listarBaixarProprietario_.Show();
         }

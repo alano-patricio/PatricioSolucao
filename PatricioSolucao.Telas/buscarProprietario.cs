@@ -10,17 +10,20 @@ using System.Windows.Forms;
 
 namespace PatricioSolucao.Telas
 {
-    public partial class listarBaixarProprietario : Form
+    public partial class buscarProprietario : Form
     {
-        public listarBaixarProprietario()
+        public buscarProprietario()
         {
             InitializeComponent();
         }
 
         private void listarBaixarProprietario_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Menu Menu_ = new Menu();
-            Menu_.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

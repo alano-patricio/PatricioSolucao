@@ -22,5 +22,11 @@ namespace PatricioSolucao.Telas
             Menu Menu_ = new Menu();
             Menu_.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            buscarProprietario buscarProprietario = new buscarProprietario();
+            buscarProprietario.Show();
+        }
     }
 }
