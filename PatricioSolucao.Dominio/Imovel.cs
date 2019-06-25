@@ -16,11 +16,11 @@ namespace PatricioSolucao.Dominio
         public int numero { get; set; }
         public string pontoReferencia { get; set; }
         public string observacoes { get; set; }
-        public int proprietario { get; set; }
         public bool tipo { get; set; }
         public float valor { get; set; }
         public char situacao { get; set; }
         public int id_proprietario { get; set; }
+        public int id_locatario { get; set; }
 
         public void Validar()
         {
@@ -30,15 +30,14 @@ namespace PatricioSolucao.Dominio
                 throw new Exception("O campo rua não pode ficar em branco!");
             if (numero <= 0)
                 throw new Exception("O campo numero não pode ser zero!");
-            if (proprietario <= 0)
+            if (id_proprietario <= 0)
                 throw new Exception("Id inválido!");
-            if (string.IsNullOrEmpty(tipo))
-                throw new Exception("Selecione uma opção no campo tipo!");
-            //if (string.IsNullOrEmpty(valor))
-            //    throw new Exception("O campo valor não pode ficar em branco!");
+            if (valor == 0)
+                throw new Exception("O campo valor não pode ficar em branco!");
             if (situacao >= '4' || situacao < 0)
                 throw new Exception("O campo situação incorreto!");
-
+            if (tipo == true)
+                throw new Exception("Selecione uma opção no campo tipo!");
         }
     }
 }

@@ -15,15 +15,16 @@ namespace PatricioSolucao.Infra.Dados
 
         public const string _sqlAdicionar =
             @"INSERT INTO imovel
-                   ([bairro]
-                   ,[rua]
-                   ,[numero]
-                   ,[pontoReferencia]
-                   ,[observacoes]
-                   ,[tipo]
-                   ,[valor]
-                   ,[situacao]
-                   ,[id_proprietario])
+                   (bairro
+                   ,rua
+                   ,numero
+                   ,pontoReferencia
+                   ,observacoes
+                   ,tipo
+                   ,valor
+                   ,situacao
+                   ,id_proprietario
+                   ,id_locatario)
                VALUES
                    ({0}bairro
                    ,{0}rua
@@ -33,72 +34,45 @@ namespace PatricioSolucao.Infra.Dados
                    ,{0}tipo
                    ,{0}valor
                    ,{0}situacao
-                   ,{0}id_proprietario)";
+                   ,{0}id_proprietario
+                   ,{0}id_locatario)";
 
         private const string _sqlBuscaTodos =
-            @"SELECT [Id]
-                  ,[Nome]
-                  ,[Status]
-                  ,[Logradouro]
-                  ,[Bairro]
-                  ,[Localidade]
-                  ,[Complemento]
-                  ,[Numero]
-                  ,[Cep]
-                  ,[UF]
-                  ,[Email]
-                  ,[Telefone]
-              FROM [dbo].[TBCliente]";
+          @"SELECT id
+                  ,bairro
+                  ,rua
+                  ,numero
+                  ,pontoReferencia
+                  ,observacoes
+                  ,tipo
+                  ,valor
+                  ,situacao
+                  ,id_proprietario
+                  ,id_locatario
+              FROM imovel";
 
-        private const string _sqlBuscaPorId =
-            @"SELECT [Id]
-                  ,[Nome]
-                  ,[Status]
-                  ,[Logradouro]
-                  ,[Bairro]
-                  ,[Localidade]
-                  ,[Complemento]
-                  ,[Numero]
-                  ,[Cep]
-                  ,[UF]
-                  ,[Email]
-                  ,[Telefone]
-              FROM [dbo].[TBCliente]
-              WHERE [Id] = {0}Id";
+        private const string _sqlImovelProprietario =
+            @"SELECT * FROM imovel where id_proprietario = {0}id_proprietario";
 
-        private const string _sqlBuscaPorNome =
-            @"SELECT [Id]
-                  ,[Nome]
-                  ,[Status]
-                  ,[Logradouro]
-                  ,[Bairro]
-                  ,[Localidade]
-                  ,[Complemento]
-                  ,[Numero]
-                  ,[Cep]
-                  ,[UF]
-                  ,[Email]
-                  ,[Telefone]
-              FROM [dbo].[TBCliente]
-              WHERE [Nome] = {0}NomeBuscado";
+        private const string _sqlBuscarImovelPorSituacao =
+           @"SELECT * FROM imovel where situacao = {0}situacao";
 
         private const string _sqlEditar =
-            @"UPDATE [dbo].[TBCliente]
-               SET [Nome] = {0}Nome
-                  ,[Status] = {0}Status
-                  ,[Logradouro] = {0}Logradouro
-                  ,[Bairro] = {0}Bairro
-                  ,[Localidade] = {0}Localidade
-                  ,[Complemento] = {0}Complemento
-                  ,[Numero] = {0}Numero
-                  ,[Cep] = {0}Cep
-                  ,[UF] = {0}UF
-                  ,[Email] = {0}Email
-                  ,[Telefone] = {0}Telefone
-             WHERE [Id] = {0}Id";
+  @"UPDATE imovel
+               SET bairro = {0}bairro
+                  ,rua = {0}rua
+                  ,numero = {0}numero 
+                  ,pontoReferencia = {0}pontoReferencia 
+                  ,observacoes = {0}observacoes 
+                  ,tipo = {0}tipo 
+                  ,valor = {0}valor 
+                  ,situacao = {0}situacao 
+                  ,id_proprietario = {0}id_proprietario
+                  ,id_locatario = {0}id_locatario
+             WHERE id_proprietario = {0}id_proprietario";
 
         private const string _sqlDeletar =
-            @"DELETE FROM [dbo].[TBCliente] WHERE [Id] = {0}Id";
+            @"DELETE FROM imovel WHERE id = {0}id";
 
         #endregion
 
@@ -112,24 +86,31 @@ namespace PatricioSolucao.Infra.Dados
             return Db.GetAll(_sqlBuscaTodos, ConverterImovel);
         }
 
-        //public Contato BuscarPorId(int id)
-        //{
-        //    var parms = new Dictionary<string, object> { { "Id", id } };
+        public Imovel BuscarImovelPorProprietario(int id_proprietario)
+        {
+            var parms = new Dictionary<string, object> { { "id_proprietario", id_proprietario } };
 
-        //    return Db.Get(_sqlBuscaPorId, ConverterContato, parms);
-        //}
+            return Db.Get(_sqlImovelProprietario, ConverterImovel, parms);
+        }
 
-        //public void Editar(Contato contato)
-        //{
-        //    Db.Update(_sqlEditar, BuscarParametros(contato));
-        //}
+        public Imovel BuscarImovelPorSituacao(string situacao)
+        {
+            var parms = new Dictionary<string, object> { { "situacao", situacao } };
 
-        //public void Deletar(int id)
-        //{
-        //    var parms = new Dictionary<string, object> { { "Id", id } };
+            return Db.Get(_sqlBuscarImovelPorSituacao, ConverterImovel, parms);
+        }
 
-        //    Db.Delete(_sqlDeletar, parms);
-        //}
+        public void Editar(Imovel imovel)
+        {
+            Db.Update(_sqlEditar, BuscarParametros(imovel));
+        }
+
+        public void Deletar(int id)
+        {
+            var parms = new Dictionary<string, object> { { "Id", id } };
+
+            Db.Delete(_sqlDeletar, parms);
+        }
 
         //#region Metódos Privados - Conversor e Manipulador de Parametros
 
@@ -146,6 +127,7 @@ namespace PatricioSolucao.Infra.Dados
             imovel.valor = Convert.ToInt32(reader["valor"]);
             imovel.situacao = Convert.ToChar(reader["situacao"]);
             imovel.id_proprietario = Convert.ToInt32(reader["id_proprietario"]);
+            imovel.id_locatario = Convert.ToInt32(reader["id_locatario"]);
             return imovel;
         }
 
@@ -162,7 +144,8 @@ namespace PatricioSolucao.Infra.Dados
                 {"tipo",imovel.tipo},
                 {"valor",imovel.valor},
                 {"situacao",imovel.situacao},
-                {"id_proprietario",imovel.id_proprietario}
+                {"id_proprietario",imovel.id_proprietario},
+                {"id_locatario",imovel.id_locatario},
 
             };
         }

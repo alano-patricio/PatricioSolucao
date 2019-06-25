@@ -22,7 +22,6 @@ namespace PatricioSolucao.Dominio.Testes
                 numero = 331,
                 pontoReferencia = "Correio",
                 observacoes = "nada",
-                proprietario = 1,
                 tipo = true,
                 valor = 355,
                 situacao = '1',
@@ -76,10 +75,10 @@ namespace PatricioSolucao.Dominio.Testes
         }
 
         [Test]
-        public void Teste_Imovel_Deve_Ter_Idproprietario_Valido()
+        public void Teste_Imovel_Deve_Ter_Id_Proprietario_Valido()
         {
             //ARRANGE
-            _imovel.proprietario = 0;
+            _imovel.id_proprietario = 0;
 
             //ACTIONl
             Action resultado = () => _imovel.Validar();

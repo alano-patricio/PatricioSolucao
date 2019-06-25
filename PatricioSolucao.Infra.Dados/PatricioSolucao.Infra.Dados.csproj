@@ -49,6 +49,8 @@
   <ItemGroup>
     <Compile Include="Comum\Db.cs" />
     <Compile Include="ImovelDao.cs" />
+    <Compile Include="LocatarioDao.cs" />
+    <Compile Include="ProprietarioDao.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PatricioSolucao.Dominio\PatricioSolucao.Dominio.csproj">

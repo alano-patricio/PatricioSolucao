@@ -53,6 +53,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ImovelDaoTestes.cs" />
+    <Compile Include="LocatarioDaoTestes.cs" />
+    <Compile Include="ObjetoBase.cs" />
+    <Compile Include="ProprietarioDaoTestes.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PatricioSolucao.Dominio\PatricioSolucao.Dominio.csproj">
