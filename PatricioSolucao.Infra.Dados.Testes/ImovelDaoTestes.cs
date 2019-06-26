@@ -95,15 +95,15 @@ namespace PatricioSolucao.Infra.Dados.Testes
         {
             //CENÁRIO
             int idImovelEditado = 1; 
-            string bairroEditado = "bairroEDITADO";
-            Imovel imovelEditado = _imovelDao.BuscarImovelPorProprietario(idImovelEditado);
+            int idLocatarioEditado = 1;
+            Imovel imovelEditado = _imovelDao.BuscarImovelPorId(idImovelEditado);
 
             //AÇÃO
-            imovelEditado.bairro = bairroEditado;
+            imovelEditado.id_locatario = idLocatarioEditado;
             _imovelDao.Editar(imovelEditado);
 
-            Imovel imovelBuscado = _imovelDao.BuscarImovelPorProprietario(idImovelEditado);
-            Assert.AreEqual(bairroEditado, imovelBuscado.bairro);
+            Imovel imovelBuscado = _imovelDao.BuscarImovelPorId(idImovelEditado);
+            Assert.AreEqual(idLocatarioEditado, imovelBuscado.id_locatario);
         }
 
         [Test]

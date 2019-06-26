@@ -50,7 +50,8 @@ namespace PatricioSolucao.Telas
                 //tipo = Convert.ToBoolean(cadastrarImovelTipo.Text),
                 valor = (float)Convert.ToDouble(cadastrarImovelValor.Text),
                 //situacao = Convert.ToChar(cadastrarImovelSituacao.Text)
-                situacao = '0'
+                situacao = '0',
+                //id_locatario = 0
             };
             _imovelDao.Adicionar(imovel);
             MessageBox.Show("Ou deu bom ou deu ruim!");

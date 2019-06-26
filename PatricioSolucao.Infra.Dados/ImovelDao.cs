@@ -23,8 +23,7 @@ namespace PatricioSolucao.Infra.Dados
                    ,tipo
                    ,valor
                    ,situacao
-                   ,id_proprietario
-                   ,id_locatario)
+                   ,id_proprietario)
                VALUES
                    ({0}bairro
                    ,{0}rua
@@ -34,8 +33,7 @@ namespace PatricioSolucao.Infra.Dados
                    ,{0}tipo
                    ,{0}valor
                    ,{0}situacao
-                   ,{0}id_proprietario
-                   ,{0}id_locatario)";
+                   ,{0}id_proprietario)";
 
         private const string _sqlBuscaTodos =
           @"SELECT id
@@ -50,6 +48,9 @@ namespace PatricioSolucao.Infra.Dados
                   ,id_proprietario
                   ,id_locatario
               FROM imovel";
+
+        private const string _sqlImovelId =
+            @"SELECT * FROM imovel where id = {0}id";
 
         private const string _sqlImovelProprietario =
             @"SELECT * FROM imovel where id_proprietario = {0}id_proprietario";
@@ -69,7 +70,7 @@ namespace PatricioSolucao.Infra.Dados
                   ,situacao = {0}situacao 
                   ,id_proprietario = {0}id_proprietario
                   ,id_locatario = {0}id_locatario
-             WHERE id_proprietario = {0}id_proprietario";
+             WHERE id = {0}id";
 
         private const string _sqlDeletar =
             @"DELETE FROM imovel WHERE id = {0}id";
@@ -78,7 +79,7 @@ namespace PatricioSolucao.Infra.Dados
 
         public int Adicionar(Imovel novoImovel)
         {
-            return Db.Insert(_sqlAdicionar, BuscarParametros(novoImovel));
+            return Db.Insert(_sqlAdicionar, BuscarParametrosAdicionar(novoImovel));
         }
 
         public IList<Imovel> BuscarTodos()
@@ -91,6 +92,13 @@ namespace PatricioSolucao.Infra.Dados
             var parms = new Dictionary<string, object> { { "id_proprietario", id_proprietario } };
 
             return Db.Get(_sqlImovelProprietario, ConverterImovel, parms);
+        }
+
+        public Imovel BuscarImovelPorId(int id)
+        {
+            var parms = new Dictionary<string, object> { { "id", id } };
+
+            return Db.Get(_sqlImovelId, ConverterImovelAdicionar, parms);
         }
 
         public Imovel BuscarImovelPorSituacao(string situacao)
@@ -114,7 +122,7 @@ namespace PatricioSolucao.Infra.Dados
 
         //#region Metódos Privados - Conversor e Manipulador de Parametros
 
-        private Imovel ConverterImovel(IDataReader reader)
+        private Imovel ConverterImovelAdicionar(IDataReader reader)
         {
             Imovel imovel = new Imovel();
             imovel.id = Convert.ToInt32(reader["id"]);
@@ -131,7 +139,23 @@ namespace PatricioSolucao.Infra.Dados
             return imovel;
         }
 
-        private Dictionary<string, object> BuscarParametros(Imovel imovel)
+        private Imovel ConverterImovel(IDataReader reader)
+        {
+            Imovel imovel = new Imovel();
+            imovel.id = Convert.ToInt32(reader["id"]);
+            imovel.bairro = Convert.ToString(reader["bairro"]);
+            imovel.rua = Convert.ToString(reader["rua"]);
+            imovel.numero = Convert.ToInt32(reader["numero"]);
+            imovel.pontoReferencia = Convert.ToString(reader["pontoReferencia"]);
+            imovel.observacoes = Convert.ToString(reader["observacoes"]);
+            imovel.tipo = Convert.ToBoolean(reader["tipo"]);
+            imovel.valor = Convert.ToInt32(reader["valor"]);
+            imovel.situacao = Convert.ToChar(reader["situacao"]);
+            imovel.id_proprietario = Convert.ToInt32(reader["id_proprietario"]);
+            return imovel;
+        }
+
+        private Dictionary<string, object> BuscarParametrosAdicionar(Imovel imovel)
         {
             return new Dictionary<string, object>
             {
@@ -150,5 +174,22 @@ namespace PatricioSolucao.Infra.Dados
             };
         }
 
+        private Dictionary<string, object> BuscarParametros(Imovel imovel)
+        {
+            return new Dictionary<string, object>
+            {
+                {"id",imovel.id},
+                {"bairro",imovel.bairro},
+                {"rua",imovel.rua},
+                {"numero",imovel.numero},
+                {"pontoReferencia",imovel.pontoReferencia},
+                {"observacoes",imovel.observacoes},
+                {"tipo",imovel.tipo},
+                {"valor",imovel.valor},
+                {"situacao",imovel.situacao},
+                {"id_proprietario",imovel.id_proprietario},
+
+            };
+        }
     }
 }
