@@ -29,7 +29,7 @@ namespace PatricioSolucao.Telas
             
             _proprietarioEncontrado = _proprietarioDao.BuscarPorCpf(cpf);
             this.Hide();
-            var enviaProprietarioParaImovel = new cadastrarImovel(_proprietarioEncontrado.nome);
+            var enviaProprietarioParaImovel = new cadastrarImovel(_proprietarioEncontrado.nome, _proprietarioEncontrado.id);
             enviaProprietarioParaImovel.Show();
         }
 
