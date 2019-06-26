@@ -29,24 +29,23 @@
         private void InitializeComponent()
         {
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.cadastrarImovelValor = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.cadastrarImovelTipo = new System.Windows.Forms.ComboBox();
+            this.cadastrarImovelNomeProprietario = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.cadastrarImovelObs = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.cadastrarImovelReferencia = new System.Windows.Forms.TextBox();
+            this.cadastrarImovelRua = new System.Windows.Forms.TextBox();
+            this.cadastrarImovelNum = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cadastrarImovelBairro = new System.Windows.Forms.TextBox();
+            this.cadastrarImovelSituacao = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -60,12 +59,12 @@
             this.button3.Text = "Adicionar";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // cadastrarImovelValor
             // 
-            this.textBox7.Location = new System.Drawing.Point(569, 140);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(114, 20);
-            this.textBox7.TabIndex = 37;
+            this.cadastrarImovelValor.Location = new System.Drawing.Point(569, 140);
+            this.cadastrarImovelValor.Name = "cadastrarImovelValor";
+            this.cadastrarImovelValor.Size = new System.Drawing.Size(114, 20);
+            this.cadastrarImovelValor.TabIndex = 37;
             // 
             // label8
             // 
@@ -76,33 +75,23 @@
             this.label8.TabIndex = 36;
             this.label8.Text = "Valor R$";
             // 
-            // comboBox1
+            // cadastrarImovelTipo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cadastrarImovelTipo.FormattingEnabled = true;
+            this.cadastrarImovelTipo.Items.AddRange(new object[] {
             "Locação",
             "Venda"});
-            this.comboBox1.Location = new System.Drawing.Point(433, 140);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 35;
+            this.cadastrarImovelTipo.Location = new System.Drawing.Point(433, 140);
+            this.cadastrarImovelTipo.Name = "cadastrarImovelTipo";
+            this.cadastrarImovelTipo.Size = new System.Drawing.Size(121, 21);
+            this.cadastrarImovelTipo.TabIndex = 35;
             // 
-            // button1
+            // cadastrarImovelNomeProprietario
             // 
-            this.button1.Location = new System.Drawing.Point(339, 139);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(12, 141);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(307, 20);
-            this.textBox6.TabIndex = 32;
+            this.cadastrarImovelNomeProprietario.Location = new System.Drawing.Point(12, 141);
+            this.cadastrarImovelNomeProprietario.Name = "cadastrarImovelNomeProprietario";
+            this.cadastrarImovelNomeProprietario.Size = new System.Drawing.Size(415, 20);
+            this.cadastrarImovelNomeProprietario.TabIndex = 32;
             // 
             // label6
             // 
@@ -113,12 +102,12 @@
             this.label6.TabIndex = 31;
             this.label6.Text = "Proprietário";
             // 
-            // textBox5
+            // cadastrarImovelObs
             // 
-            this.textBox5.Location = new System.Drawing.Point(12, 81);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(754, 20);
-            this.textBox5.TabIndex = 30;
+            this.cadastrarImovelObs.Location = new System.Drawing.Point(12, 81);
+            this.cadastrarImovelObs.Name = "cadastrarImovelObs";
+            this.cadastrarImovelObs.Size = new System.Drawing.Size(754, 20);
+            this.cadastrarImovelObs.TabIndex = 30;
             // 
             // label4
             // 
@@ -129,26 +118,26 @@
             this.label4.TabIndex = 28;
             this.label4.Text = "Ponto de referência";
             // 
-            // textBox4
+            // cadastrarImovelReferencia
             // 
-            this.textBox4.Location = new System.Drawing.Point(610, 29);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(156, 20);
-            this.textBox4.TabIndex = 27;
+            this.cadastrarImovelReferencia.Location = new System.Drawing.Point(610, 29);
+            this.cadastrarImovelReferencia.Name = "cadastrarImovelReferencia";
+            this.cadastrarImovelReferencia.Size = new System.Drawing.Size(156, 20);
+            this.cadastrarImovelReferencia.TabIndex = 27;
             // 
-            // textBox2
+            // cadastrarImovelRua
             // 
-            this.textBox2.Location = new System.Drawing.Point(245, 29);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(216, 20);
-            this.textBox2.TabIndex = 26;
+            this.cadastrarImovelRua.Location = new System.Drawing.Point(245, 29);
+            this.cadastrarImovelRua.Name = "cadastrarImovelRua";
+            this.cadastrarImovelRua.Size = new System.Drawing.Size(216, 20);
+            this.cadastrarImovelRua.TabIndex = 26;
             // 
-            // textBox3
+            // cadastrarImovelNum
             // 
-            this.textBox3.Location = new System.Drawing.Point(485, 29);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 25;
+            this.cadastrarImovelNum.Location = new System.Drawing.Point(485, 29);
+            this.cadastrarImovelNum.Name = "cadastrarImovelNum";
+            this.cadastrarImovelNum.Size = new System.Drawing.Size(100, 20);
+            this.cadastrarImovelNum.TabIndex = 25;
             // 
             // label3
             // 
@@ -186,25 +175,25 @@
             this.label5.TabIndex = 29;
             this.label5.Text = "Observações";
             // 
-            // textBox1
+            // cadastrarImovelBairro
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(216, 20);
-            this.textBox1.TabIndex = 21;
+            this.cadastrarImovelBairro.Location = new System.Drawing.Point(12, 29);
+            this.cadastrarImovelBairro.Name = "cadastrarImovelBairro";
+            this.cadastrarImovelBairro.Size = new System.Drawing.Size(216, 20);
+            this.cadastrarImovelBairro.TabIndex = 21;
             // 
-            // comboBox2
+            // cadastrarImovelSituacao
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cadastrarImovelSituacao.FormattingEnabled = true;
+            this.cadastrarImovelSituacao.Items.AddRange(new object[] {
             "Locar",
             "Vender",
             "Locado",
             "Vendido"});
-            this.comboBox2.Location = new System.Drawing.Point(689, 140);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(77, 21);
-            this.comboBox2.TabIndex = 40;
+            this.cadastrarImovelSituacao.Location = new System.Drawing.Point(689, 140);
+            this.cadastrarImovelSituacao.Name = "cadastrarImovelSituacao";
+            this.cadastrarImovelSituacao.Size = new System.Drawing.Size(77, 21);
+            this.cadastrarImovelSituacao.TabIndex = 40;
             // 
             // label9
             // 
@@ -230,25 +219,24 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 226);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cadastrarImovelSituacao);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.cadastrarImovelValor);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cadastrarImovelTipo);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.cadastrarImovelNomeProprietario);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.cadastrarImovelObs);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.cadastrarImovelReferencia);
+            this.Controls.Add(this.cadastrarImovelRua);
+            this.Controls.Add(this.cadastrarImovelNum);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cadastrarImovelBairro);
             this.Name = "cadastrarImovel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Imóvel";
@@ -260,24 +248,23 @@
 
         #endregion
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox cadastrarImovelValor;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.ComboBox cadastrarImovelTipo;
+        private System.Windows.Forms.TextBox cadastrarImovelNomeProprietario;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox cadastrarImovelObs;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox cadastrarImovelReferencia;
+        private System.Windows.Forms.TextBox cadastrarImovelRua;
+        private System.Windows.Forms.TextBox cadastrarImovelNum;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox cadastrarImovelBairro;
+        private System.Windows.Forms.ComboBox cadastrarImovelSituacao;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
     }

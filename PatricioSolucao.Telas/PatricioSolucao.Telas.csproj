@@ -205,5 +205,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PatricioSolucao.Dominio\PatricioSolucao.Dominio.csproj">
+      <Project>{1289fc11-5040-4c86-85f6-0e8bc27af73b}</Project>
+      <Name>PatricioSolucao.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PatricioSolucao.Infra.Dados\PatricioSolucao.Infra.Dados.csproj">
+      <Project>{789de313-4283-448c-88a8-b5b9e06c1d63}</Project>
+      <Name>PatricioSolucao.Infra.Dados</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

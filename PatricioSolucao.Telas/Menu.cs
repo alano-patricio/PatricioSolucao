@@ -19,9 +19,11 @@ namespace PatricioSolucao.Telas
 
         private void imóvelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cadastrarImovel cadastrarImovel_ = new cadastrarImovel();
+            buscarProprietario buscarProprietario_ = new buscarProprietario();
             this.Hide();
-            cadastrarImovel_.Show();
+            MessageBox.Show("Digite o CPF do proprietario do imóvel que deseja cadastrar");
+            buscarProprietario_.Show();
+            
         }
 
         private void locatáriosToolStripMenuItem1_Click(object sender, EventArgs e)

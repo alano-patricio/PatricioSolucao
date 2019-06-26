@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PatricioSolucao.Dominio;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -151,6 +152,42 @@ namespace PatricioSolucao.Infra.Dados.Comum
                 }
             }
         }
+
+        public static List<Proprietario> buscaCPF(string sql)
+        {
+            using (var connection = factory.CreateConnection())
+            {
+                connection.ConnectionString = connectionString;
+
+                using (var command = factory.CreateCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = sql;
+
+                    connection.Open();
+
+                    List<Proprietario> _proprietarios = new List<Proprietario>();
+                    var reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        _proprietarios.Add(new Proprietario()
+                        {
+                            id = Convert.ToInt16(reader["id"]),
+                            nome = Convert.ToString(reader["nome"]),
+                            cpf = Convert.ToString(reader["cpf"]),
+                            rg = Convert.ToString(reader["rg"]),
+                            dataNascimento = Convert.ToDateTime(reader["dataNascimento"]),
+                            dadosBancarios = Convert.ToString(reader["dadosBancarios"])
+                        });
+                    }
+                    reader.Close();
+                    return _proprietarios;
+                }
+            }
+        }
+
+
 
         #region Private methods
 

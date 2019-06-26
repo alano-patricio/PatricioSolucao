@@ -12,9 +12,11 @@ namespace PatricioSolucao.Telas
 {
     public partial class cadastrarImovel : Form
     {
-        public cadastrarImovel()
+        public cadastrarImovel(string recebeProprietario)
         {
             InitializeComponent();
+            cadastrarImovelNomeProprietario.Text = recebeProprietario;
+            cadastrarImovelNomeProprietario.Enabled = false;
         }
 
         private void cadastrarImovel_FormClosed(object sender, FormClosedEventArgs e)
@@ -23,10 +25,5 @@ namespace PatricioSolucao.Telas
             Menu_.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            buscarProprietario buscarProprietario = new buscarProprietario();
-            buscarProprietario.Show();
-        }
     }
 }

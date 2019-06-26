@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PatricioSolucao.Dominio;
+using PatricioSolucao.Infra.Dados;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,18 +14,29 @@ namespace PatricioSolucao.Telas
 {
     public partial class buscarProprietario : Form
     {
+        private ProprietarioDao _proprietarioDao;
+        private Proprietario _proprietarioEncontrado;
+
         public buscarProprietario()
         {
             InitializeComponent();
+            _proprietarioDao = new ProprietarioDao();
         }
 
-        private void listarBaixarProprietario_FormClosed(object sender, FormClosedEventArgs e)
+        private void btnBuscarProprietario_Click(object sender, EventArgs e)
         {
+            var cpf = txtBuscarCpfProprietario.Text;
+            
+            _proprietarioEncontrado = _proprietarioDao.BuscarPorCpf(cpf);
+            this.Hide();
+            var enviaProprietarioParaImovel = new cadastrarImovel(_proprietarioEncontrado.nome);
+            enviaProprietarioParaImovel.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void buscarProprietario_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            Menu Menu_ = new Menu();
+            Menu_.Show();
         }
     }
 }
