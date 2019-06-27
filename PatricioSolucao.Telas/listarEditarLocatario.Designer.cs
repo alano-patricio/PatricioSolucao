@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buscarLocatarioBuscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buscarLocatarioCpf = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,30 +43,31 @@
             this.dataGridView1.Size = new System.Drawing.Size(657, 211);
             this.dataGridView1.TabIndex = 25;
             // 
-            // button3
+            // buscarLocatarioBuscar
             // 
-            this.button3.Location = new System.Drawing.Point(231, 23);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 24;
-            this.button3.Text = "Buscar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buscarLocatarioBuscar.Location = new System.Drawing.Point(231, 23);
+            this.buscarLocatarioBuscar.Name = "buscarLocatarioBuscar";
+            this.buscarLocatarioBuscar.Size = new System.Drawing.Size(75, 23);
+            this.buscarLocatarioBuscar.TabIndex = 24;
+            this.buscarLocatarioBuscar.Text = "Buscar";
+            this.buscarLocatarioBuscar.UseVisualStyleBackColor = true;
+            this.buscarLocatarioBuscar.Click += new System.EventHandler(this.buscarLocatarioBuscar_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(9, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 13);
+            this.label1.Size = new System.Drawing.Size(74, 13);
             this.label1.TabIndex = 23;
-            this.label1.Text = "CPF";
+            this.label1.Text = "CPF Locatário";
             // 
-            // textBox1
+            // buscarLocatarioCpf
             // 
-            this.textBox1.Location = new System.Drawing.Point(9, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(216, 20);
-            this.textBox1.TabIndex = 22;
+            this.buscarLocatarioCpf.Location = new System.Drawing.Point(9, 25);
+            this.buscarLocatarioCpf.Name = "buscarLocatarioCpf";
+            this.buscarLocatarioCpf.Size = new System.Drawing.Size(216, 20);
+            this.buscarLocatarioCpf.TabIndex = 22;
             // 
             // listarEditarLocatario
             // 
@@ -74,9 +75,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(681, 286);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.buscarLocatarioBuscar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.buscarLocatarioCpf);
             this.Name = "listarEditarLocatario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listar Locatários";
@@ -90,8 +91,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buscarLocatarioBuscar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox buscarLocatarioCpf;
     }
 }

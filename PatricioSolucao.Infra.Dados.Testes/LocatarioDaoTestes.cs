@@ -93,7 +93,7 @@ namespace PatricioSolucao.Infra.Dados.Testes
         {
             int quantidadeLocatarios = 1;
 
-            var resultado = _locatarioDao.BuscarTodos();
+            var resultado = _locatarioDao.BuscarLocatarioPeloCpf();
 
             Assert.AreEqual(quantidadeLocatarios, resultado.Count);
         }

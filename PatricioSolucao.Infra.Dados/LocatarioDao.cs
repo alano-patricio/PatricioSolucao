@@ -82,7 +82,7 @@ namespace PatricioSolucao.Infra.Dados
             Db.Update(_sqlEditar, BuscarParametros(locatario));
         }
 
-        public IList<Locatario> BuscarTodos()
+        public IList<Locatario> BuscarLocatarioPeloCpf()
         {
             return Db.GetAll(_sqlBuscaTodos, ConverterLocatario);
         }

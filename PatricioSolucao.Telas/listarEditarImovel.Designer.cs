@@ -64,9 +64,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(9, 8);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.Size = new System.Drawing.Size(82, 13);
             this.label3.TabIndex = 37;
-            this.label3.Text = "Proprietário";
+            this.label3.Text = "CPF proprietario";
             // 
             // listarEditarImovel
             // 

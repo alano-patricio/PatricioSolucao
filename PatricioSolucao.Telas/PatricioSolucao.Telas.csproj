@@ -96,16 +96,16 @@
     <Compile Include="Financeiro.Designer.cs">
       <DependentUpon>Financeiro.cs</DependentUpon>
     </Compile>
-    <Compile Include="listarBaixarImovel.cs">
+    <Compile Include="Sem Uso\listarBaixarImovel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="listarBaixarImovel.Designer.cs">
+    <Compile Include="Sem Uso\listarBaixarImovel.Designer.cs">
       <DependentUpon>listarBaixarImovel.cs</DependentUpon>
     </Compile>
-    <Compile Include="listarBaixarLocatario.cs">
+    <Compile Include="Sem Uso\listarBaixarLocatario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="listarBaixarLocatario.Designer.cs">
+    <Compile Include="Sem Uso\listarBaixarLocatario.Designer.cs">
       <DependentUpon>listarBaixarLocatario.cs</DependentUpon>
     </Compile>
     <Compile Include="buscarProprietario.cs">
@@ -161,10 +161,10 @@
     <EmbeddedResource Include="Financeiro.resx">
       <DependentUpon>Financeiro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="listarBaixarImovel.resx">
+    <EmbeddedResource Include="Sem Uso\listarBaixarImovel.resx">
       <DependentUpon>listarBaixarImovel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="listarBaixarLocatario.resx">
+    <EmbeddedResource Include="Sem Uso\listarBaixarLocatario.resx">
       <DependentUpon>listarBaixarLocatario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="buscarProprietario.resx">
