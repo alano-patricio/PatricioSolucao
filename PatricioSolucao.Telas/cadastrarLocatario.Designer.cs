@@ -28,32 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.cadastrarLocatarioAvalistaRenda = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.cadastrarLocatarioAvalistaCpf = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.cadastrarLocatarioAvalistaNome = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.cadastrarLocatarioRenda = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.cadastrarLocatarioRg = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cadastrarLocatarioCpf = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cadastrarLocatarioAvalista = new System.Windows.Forms.CheckBox();
+            this.cadastrarLocatarioNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cadastrarLocatarioData = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
-            // textBox6
+            // cadastrarLocatarioAvalistaRenda
             // 
-            this.textBox6.Location = new System.Drawing.Point(532, 129);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(207, 20);
-            this.textBox6.TabIndex = 80;
+            this.cadastrarLocatarioAvalistaRenda.Enabled = false;
+            this.cadastrarLocatarioAvalistaRenda.Location = new System.Drawing.Point(532, 129);
+            this.cadastrarLocatarioAvalistaRenda.Name = "cadastrarLocatarioAvalistaRenda";
+            this.cadastrarLocatarioAvalistaRenda.Size = new System.Drawing.Size(207, 20);
+            this.cadastrarLocatarioAvalistaRenda.TabIndex = 9;
             // 
             // label6
             // 
@@ -64,12 +65,13 @@
             this.label6.TabIndex = 79;
             this.label6.Text = "Renda";
             // 
-            // textBox7
+            // cadastrarLocatarioAvalistaCpf
             // 
-            this.textBox7.Location = new System.Drawing.Point(309, 129);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(207, 20);
-            this.textBox7.TabIndex = 78;
+            this.cadastrarLocatarioAvalistaCpf.Enabled = false;
+            this.cadastrarLocatarioAvalistaCpf.Location = new System.Drawing.Point(309, 129);
+            this.cadastrarLocatarioAvalistaCpf.Name = "cadastrarLocatarioAvalistaCpf";
+            this.cadastrarLocatarioAvalistaCpf.Size = new System.Drawing.Size(207, 20);
+            this.cadastrarLocatarioAvalistaCpf.TabIndex = 8;
             // 
             // label7
             // 
@@ -80,12 +82,13 @@
             this.label7.TabIndex = 77;
             this.label7.Text = "CPF";
             // 
-            // textBox8
+            // cadastrarLocatarioAvalistaNome
             // 
-            this.textBox8.Location = new System.Drawing.Point(15, 129);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(279, 20);
-            this.textBox8.TabIndex = 76;
+            this.cadastrarLocatarioAvalistaNome.Enabled = false;
+            this.cadastrarLocatarioAvalistaNome.Location = new System.Drawing.Point(15, 129);
+            this.cadastrarLocatarioAvalistaNome.Name = "cadastrarLocatarioAvalistaNome";
+            this.cadastrarLocatarioAvalistaNome.Size = new System.Drawing.Size(279, 20);
+            this.cadastrarLocatarioAvalistaNome.TabIndex = 7;
             // 
             // label8
             // 
@@ -101,16 +104,17 @@
             this.button3.Location = new System.Drawing.Point(664, 172);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 74;
+            this.button3.TabIndex = 5;
             this.button3.Text = "Adicionar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBox5
+            // cadastrarLocatarioRenda
             // 
-            this.textBox5.Location = new System.Drawing.Point(309, 77);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(207, 20);
-            this.textBox5.TabIndex = 73;
+            this.cadastrarLocatarioRenda.Location = new System.Drawing.Point(309, 77);
+            this.cadastrarLocatarioRenda.Name = "cadastrarLocatarioRenda";
+            this.cadastrarLocatarioRenda.Size = new System.Drawing.Size(207, 20);
+            this.cadastrarLocatarioRenda.TabIndex = 4;
             // 
             // label5
             // 
@@ -121,13 +125,6 @@
             this.label5.TabIndex = 72;
             this.label5.Text = "Renda";
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(15, 77);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(279, 20);
-            this.textBox4.TabIndex = 71;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -137,12 +134,12 @@
             this.label4.TabIndex = 70;
             this.label4.Text = "Data de nascimento";
             // 
-            // textBox3
+            // cadastrarLocatarioRg
             // 
-            this.textBox3.Location = new System.Drawing.Point(532, 26);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(207, 20);
-            this.textBox3.TabIndex = 69;
+            this.cadastrarLocatarioRg.Location = new System.Drawing.Point(532, 26);
+            this.cadastrarLocatarioRg.Name = "cadastrarLocatarioRg";
+            this.cadastrarLocatarioRg.Size = new System.Drawing.Size(207, 20);
+            this.cadastrarLocatarioRg.TabIndex = 2;
             // 
             // label3
             // 
@@ -153,12 +150,12 @@
             this.label3.TabIndex = 68;
             this.label3.Text = "RG";
             // 
-            // textBox2
+            // cadastrarLocatarioCpf
             // 
-            this.textBox2.Location = new System.Drawing.Point(309, 26);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(207, 20);
-            this.textBox2.TabIndex = 67;
+            this.cadastrarLocatarioCpf.Location = new System.Drawing.Point(309, 26);
+            this.cadastrarLocatarioCpf.Name = "cadastrarLocatarioCpf";
+            this.cadastrarLocatarioCpf.Size = new System.Drawing.Size(207, 20);
+            this.cadastrarLocatarioCpf.TabIndex = 1;
             // 
             // label2
             // 
@@ -169,22 +166,23 @@
             this.label2.TabIndex = 66;
             this.label2.Text = "CPF";
             // 
-            // checkBox1
+            // cadastrarLocatarioAvalista
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(532, 79);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(63, 17);
-            this.checkBox1.TabIndex = 65;
-            this.checkBox1.Text = "Avalista";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cadastrarLocatarioAvalista.AutoSize = true;
+            this.cadastrarLocatarioAvalista.Location = new System.Drawing.Point(532, 79);
+            this.cadastrarLocatarioAvalista.Name = "cadastrarLocatarioAvalista";
+            this.cadastrarLocatarioAvalista.Size = new System.Drawing.Size(63, 17);
+            this.cadastrarLocatarioAvalista.TabIndex = 6;
+            this.cadastrarLocatarioAvalista.Text = "Avalista";
+            this.cadastrarLocatarioAvalista.UseVisualStyleBackColor = true;
+            this.cadastrarLocatarioAvalista.CheckedChanged += new System.EventHandler(this.cadastrarLocatarioAvalista_CheckedChanged);
             // 
-            // textBox1
+            // cadastrarLocatarioNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(279, 20);
-            this.textBox1.TabIndex = 64;
+            this.cadastrarLocatarioNome.Location = new System.Drawing.Point(15, 26);
+            this.cadastrarLocatarioNome.Name = "cadastrarLocatarioNome";
+            this.cadastrarLocatarioNome.Size = new System.Drawing.Size(279, 20);
+            this.cadastrarLocatarioNome.TabIndex = 0;
             // 
             // label1
             // 
@@ -195,28 +193,38 @@
             this.label1.TabIndex = 63;
             this.label1.Text = "Nome";
             // 
+            // cadastrarLocatarioData
+            // 
+            this.cadastrarLocatarioData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cadastrarLocatarioData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.cadastrarLocatarioData.Location = new System.Drawing.Point(15, 79);
+            this.cadastrarLocatarioData.Name = "cadastrarLocatarioData";
+            this.cadastrarLocatarioData.Size = new System.Drawing.Size(279, 21);
+            this.cadastrarLocatarioData.TabIndex = 3;
+            this.cadastrarLocatarioData.Value = new System.DateTime(2001, 6, 26, 20, 35, 0, 0);
+            // 
             // cadastrarLocatario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(746, 200);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.cadastrarLocatarioData);
+            this.Controls.Add(this.cadastrarLocatarioAvalistaRenda);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.cadastrarLocatarioAvalistaCpf);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.cadastrarLocatarioAvalistaNome);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.cadastrarLocatarioRenda);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.cadastrarLocatarioRg);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.cadastrarLocatarioCpf);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cadastrarLocatarioAvalista);
+            this.Controls.Add(this.cadastrarLocatarioNome);
             this.Controls.Add(this.label1);
             this.Name = "cadastrarLocatario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -228,23 +236,23 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox cadastrarLocatarioAvalistaRenda;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox cadastrarLocatarioAvalistaCpf;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox cadastrarLocatarioAvalistaNome;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox cadastrarLocatarioRenda;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox cadastrarLocatarioRg;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox cadastrarLocatarioCpf;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.CheckBox cadastrarLocatarioAvalista;
+        private System.Windows.Forms.TextBox cadastrarLocatarioNome;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker cadastrarLocatarioData;
     }
 }

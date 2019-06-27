@@ -55,7 +55,7 @@
             this.button3.Location = new System.Drawing.Point(691, 188);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 39;
+            this.button3.TabIndex = 9;
             this.button3.Text = "Adicionar";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -65,7 +65,7 @@
             this.cadastrarImovelValor.Location = new System.Drawing.Point(569, 140);
             this.cadastrarImovelValor.Name = "cadastrarImovelValor";
             this.cadastrarImovelValor.Size = new System.Drawing.Size(114, 20);
-            this.cadastrarImovelValor.TabIndex = 37;
+            this.cadastrarImovelValor.TabIndex = 7;
             // 
             // label8
             // 
@@ -85,14 +85,14 @@
             this.cadastrarImovelTipo.Location = new System.Drawing.Point(433, 140);
             this.cadastrarImovelTipo.Name = "cadastrarImovelTipo";
             this.cadastrarImovelTipo.Size = new System.Drawing.Size(121, 21);
-            this.cadastrarImovelTipo.TabIndex = 35;
+            this.cadastrarImovelTipo.TabIndex = 6;
             // 
             // cadastrarImovelNomeProprietario
             // 
             this.cadastrarImovelNomeProprietario.Location = new System.Drawing.Point(12, 141);
             this.cadastrarImovelNomeProprietario.Name = "cadastrarImovelNomeProprietario";
             this.cadastrarImovelNomeProprietario.Size = new System.Drawing.Size(415, 20);
-            this.cadastrarImovelNomeProprietario.TabIndex = 32;
+            this.cadastrarImovelNomeProprietario.TabIndex = 5;
             // 
             // label6
             // 
@@ -108,7 +108,7 @@
             this.cadastrarImovelObs.Location = new System.Drawing.Point(12, 81);
             this.cadastrarImovelObs.Name = "cadastrarImovelObs";
             this.cadastrarImovelObs.Size = new System.Drawing.Size(754, 20);
-            this.cadastrarImovelObs.TabIndex = 30;
+            this.cadastrarImovelObs.TabIndex = 4;
             // 
             // label4
             // 
@@ -124,21 +124,21 @@
             this.cadastrarImovelReferencia.Location = new System.Drawing.Point(610, 29);
             this.cadastrarImovelReferencia.Name = "cadastrarImovelReferencia";
             this.cadastrarImovelReferencia.Size = new System.Drawing.Size(156, 20);
-            this.cadastrarImovelReferencia.TabIndex = 27;
+            this.cadastrarImovelReferencia.TabIndex = 3;
             // 
             // cadastrarImovelRua
             // 
             this.cadastrarImovelRua.Location = new System.Drawing.Point(245, 29);
             this.cadastrarImovelRua.Name = "cadastrarImovelRua";
             this.cadastrarImovelRua.Size = new System.Drawing.Size(216, 20);
-            this.cadastrarImovelRua.TabIndex = 26;
+            this.cadastrarImovelRua.TabIndex = 1;
             // 
             // cadastrarImovelNum
             // 
             this.cadastrarImovelNum.Location = new System.Drawing.Point(485, 29);
             this.cadastrarImovelNum.Name = "cadastrarImovelNum";
             this.cadastrarImovelNum.Size = new System.Drawing.Size(100, 20);
-            this.cadastrarImovelNum.TabIndex = 25;
+            this.cadastrarImovelNum.TabIndex = 2;
             // 
             // label3
             // 
@@ -181,7 +181,7 @@
             this.cadastrarImovelBairro.Location = new System.Drawing.Point(12, 29);
             this.cadastrarImovelBairro.Name = "cadastrarImovelBairro";
             this.cadastrarImovelBairro.Size = new System.Drawing.Size(216, 20);
-            this.cadastrarImovelBairro.TabIndex = 21;
+            this.cadastrarImovelBairro.TabIndex = 0;
             // 
             // cadastrarImovelSituacao
             // 
@@ -194,7 +194,7 @@
             this.cadastrarImovelSituacao.Location = new System.Drawing.Point(689, 140);
             this.cadastrarImovelSituacao.Name = "cadastrarImovelSituacao";
             this.cadastrarImovelSituacao.Size = new System.Drawing.Size(77, 21);
-            this.cadastrarImovelSituacao.TabIndex = 40;
+            this.cadastrarImovelSituacao.TabIndex = 8;
             // 
             // label9
             // 

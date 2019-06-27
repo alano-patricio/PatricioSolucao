@@ -30,17 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.cadastrarProprietarioAdd = new System.Windows.Forms.Button();
+            this.cadastrarProprietarioBanco = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.cadastrarProprietarioRg = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cadastrarProprietarioCpf = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cadastrarProprietarioNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cadastrarProprietarioData = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -48,21 +48,22 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // button3
+            // cadastrarProprietarioAdd
             // 
-            this.button3.Location = new System.Drawing.Point(661, 151);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 47;
-            this.button3.Text = "Adicionar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.cadastrarProprietarioAdd.Location = new System.Drawing.Point(661, 109);
+            this.cadastrarProprietarioAdd.Name = "cadastrarProprietarioAdd";
+            this.cadastrarProprietarioAdd.Size = new System.Drawing.Size(75, 23);
+            this.cadastrarProprietarioAdd.TabIndex = 5;
+            this.cadastrarProprietarioAdd.Text = "Adicionar";
+            this.cadastrarProprietarioAdd.UseVisualStyleBackColor = true;
+            this.cadastrarProprietarioAdd.Click += new System.EventHandler(this.cadastrarProprietarioAdd_Click);
             // 
-            // textBox5
+            // cadastrarProprietarioBanco
             // 
-            this.textBox5.Location = new System.Drawing.Point(306, 74);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(430, 20);
-            this.textBox5.TabIndex = 45;
+            this.cadastrarProprietarioBanco.Location = new System.Drawing.Point(306, 74);
+            this.cadastrarProprietarioBanco.Name = "cadastrarProprietarioBanco";
+            this.cadastrarProprietarioBanco.Size = new System.Drawing.Size(430, 20);
+            this.cadastrarProprietarioBanco.TabIndex = 4;
             // 
             // label5
             // 
@@ -73,13 +74,6 @@
             this.label5.TabIndex = 44;
             this.label5.Text = "Dados bancários";
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(12, 74);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(279, 20);
-            this.textBox4.TabIndex = 43;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -89,12 +83,12 @@
             this.label4.TabIndex = 42;
             this.label4.Text = "Data de nascimento";
             // 
-            // textBox3
+            // cadastrarProprietarioRg
             // 
-            this.textBox3.Location = new System.Drawing.Point(529, 23);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(207, 20);
-            this.textBox3.TabIndex = 41;
+            this.cadastrarProprietarioRg.Location = new System.Drawing.Point(529, 23);
+            this.cadastrarProprietarioRg.Name = "cadastrarProprietarioRg";
+            this.cadastrarProprietarioRg.Size = new System.Drawing.Size(207, 20);
+            this.cadastrarProprietarioRg.TabIndex = 2;
             // 
             // label3
             // 
@@ -105,12 +99,12 @@
             this.label3.TabIndex = 40;
             this.label3.Text = "RG";
             // 
-            // textBox2
+            // cadastrarProprietarioCpf
             // 
-            this.textBox2.Location = new System.Drawing.Point(306, 23);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(207, 20);
-            this.textBox2.TabIndex = 39;
+            this.cadastrarProprietarioCpf.Location = new System.Drawing.Point(306, 23);
+            this.cadastrarProprietarioCpf.Name = "cadastrarProprietarioCpf";
+            this.cadastrarProprietarioCpf.Size = new System.Drawing.Size(207, 20);
+            this.cadastrarProprietarioCpf.TabIndex = 1;
             // 
             // label2
             // 
@@ -121,12 +115,12 @@
             this.label2.TabIndex = 38;
             this.label2.Text = "CPF";
             // 
-            // textBox1
+            // cadastrarProprietarioNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(279, 20);
-            this.textBox1.TabIndex = 36;
+            this.cadastrarProprietarioNome.Location = new System.Drawing.Point(12, 23);
+            this.cadastrarProprietarioNome.Name = "cadastrarProprietarioNome";
+            this.cadastrarProprietarioNome.Size = new System.Drawing.Size(279, 20);
+            this.cadastrarProprietarioNome.TabIndex = 0;
             // 
             // label1
             // 
@@ -137,21 +131,29 @@
             this.label1.TabIndex = 35;
             this.label1.Text = "Nome";
             // 
+            // cadastrarProprietarioData
+            // 
+            this.cadastrarProprietarioData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.cadastrarProprietarioData.Location = new System.Drawing.Point(12, 74);
+            this.cadastrarProprietarioData.Name = "cadastrarProprietarioData";
+            this.cadastrarProprietarioData.Size = new System.Drawing.Size(279, 20);
+            this.cadastrarProprietarioData.TabIndex = 3;
+            // 
             // cadastrarProprietario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 183);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox5);
+            this.ClientSize = new System.Drawing.Size(747, 135);
+            this.Controls.Add(this.cadastrarProprietarioData);
+            this.Controls.Add(this.cadastrarProprietarioAdd);
+            this.Controls.Add(this.cadastrarProprietarioBanco);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.cadastrarProprietarioRg);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.cadastrarProprietarioCpf);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cadastrarProprietarioNome);
             this.Controls.Add(this.label1);
             this.Name = "cadastrarProprietario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -165,16 +167,16 @@
         #endregion
 
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button cadastrarProprietarioAdd;
+        private System.Windows.Forms.TextBox cadastrarProprietarioBanco;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox cadastrarProprietarioRg;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox cadastrarProprietarioCpf;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox cadastrarProprietarioNome;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker cadastrarProprietarioData;
     }
 }

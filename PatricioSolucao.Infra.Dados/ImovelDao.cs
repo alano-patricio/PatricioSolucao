@@ -23,7 +23,8 @@ namespace PatricioSolucao.Infra.Dados
                    ,tipo
                    ,valor
                    ,situacao
-                   ,id_proprietario)
+                   ,id_proprietario
+                   ,id_locatario)
                VALUES
                    ({0}bairro
                    ,{0}rua
@@ -33,7 +34,8 @@ namespace PatricioSolucao.Infra.Dados
                    ,{0}tipo
                    ,{0}valor
                    ,{0}situacao
-                   ,{0}id_proprietario)";
+                   ,{0}id_proprietario
+                   ,{0}id_locatario)";
 
         private const string _sqlBuscaTodos =
           @"SELECT id
@@ -110,7 +112,7 @@ namespace PatricioSolucao.Infra.Dados
 
         public void Editar(Imovel imovel)
         {
-            Db.Update(_sqlEditar, BuscarParametros(imovel));
+            Db.Update(_sqlEditar, BuscarParametrosAdicionar(imovel));
         }
 
         public void Deletar(int id)

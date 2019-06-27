@@ -20,7 +20,7 @@ namespace PatricioSolucao.Dominio
         public float valor { get; set; }
         public char situacao { get; set; }
         public int id_proprietario { get; set; }
-        public int id_locatario { get; set; }
+        public int? id_locatario { get; set; }
 
         public void Validar()
         {

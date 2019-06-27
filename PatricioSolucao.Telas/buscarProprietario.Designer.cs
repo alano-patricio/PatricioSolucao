@@ -58,6 +58,7 @@
             this.txtBuscarCpfProprietario.Name = "txtBuscarCpfProprietario";
             this.txtBuscarCpfProprietario.Size = new System.Drawing.Size(216, 20);
             this.txtBuscarCpfProprietario.TabIndex = 30;
+            this.txtBuscarCpfProprietario.Text = "333.333.333.37";
             // 
             // buscarProprietario
             // 
