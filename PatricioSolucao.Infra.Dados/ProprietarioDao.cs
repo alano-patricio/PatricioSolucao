@@ -63,11 +63,11 @@ namespace PatricioSolucao.Infra.Dados
             return Db.Get(_sqlBuscarPorCpf, ConverterProprietario, parms);
         }
 
-        //public List<Proprietario> BuscarPorCpf(string cpf)
-        //{
-        //    string query = "select * from proprietario WHERE cpf LIKE '%%" + cpf + "%' ";
-        //    return Db.buscaCPF(query);
-        //}
+        public List<Proprietario> BuscarLocatarioPeloCpfComLike(string cpf)
+        {
+            //return (List<Proprietario>)BuscarTodos();
+          return Db.GetAll(@"SELECT * FROM proprietario where cpf LIKE '%%" + cpf + "%'", ConverterProprietario);
+        }
 
         public Proprietario BuscarPorId(int id)
         {

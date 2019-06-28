@@ -70,6 +70,12 @@ namespace PatricioSolucao.Infra.Dados
             return Db.Get(_sqlBuscarLocatarioPeloCpf, ConverterLocatario, parms);
         }
 
+        public List<Locatario> BuscarLocatarioPeloCpfComLike(string cpf)
+        {
+
+            return Db.GetAll(@"SELECT * FROM locatario where cpf LIKE '%%" + cpf + "%'", ConverterLocatario);
+        }
+
         public Locatario BuscarLocatarioPeloId(int id)
         {
             var parms = new Dictionary<string, object> { { "id", id } };

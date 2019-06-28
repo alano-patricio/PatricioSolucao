@@ -99,8 +99,16 @@ namespace PatricioSolucao.Infra.Dados.Comum
             Update(sql, parms);
         }
 
+        public static void RunScript(string sql, Dictionary<string, object> parms = null)
+        {
+            Update(sql);
+        }
+
+
         public static List<T> GetAll<T>(string sql, Func<IDataReader, T> make, Dictionary<string, object> parms = null)
         {
+            sql = string.Format(sql, PrefixoParametro);
+
             using (var connection = factory.CreateConnection())
             {
                 connection.ConnectionString = connectionString;
@@ -153,42 +161,6 @@ namespace PatricioSolucao.Infra.Dados.Comum
             }
         }
 
-        public static List<Proprietario> buscaCPF(string sql)
-        {
-            using (var connection = factory.CreateConnection())
-            {
-                connection.ConnectionString = connectionString;
-
-                using (var command = factory.CreateCommand())
-                {
-                    command.Connection = connection;
-                    command.CommandText = sql;
-
-                    connection.Open();
-
-                    List<Proprietario> _proprietarios = new List<Proprietario>();
-                    var reader = command.ExecuteReader();
-
-                    while (reader.Read())
-                    {
-                        _proprietarios.Add(new Proprietario()
-                        {
-                            id = Convert.ToInt16(reader["id"]),
-                            nome = Convert.ToString(reader["nome"]),
-                            cpf = Convert.ToString(reader["cpf"]),
-                            rg = Convert.ToString(reader["rg"]),
-                            dataNascimento = Convert.ToDateTime(reader["dataNascimento"]),
-                            dadosBancarios = Convert.ToString(reader["dadosBancarios"])
-                        });
-                    }
-                    reader.Close();
-                    return _proprietarios;
-                }
-            }
-        }
-
-
-
         #region Private methods
 
         private static void SetParameters(this DbCommand command, Dictionary<string, object> parms)
@@ -226,4 +198,3 @@ namespace PatricioSolucao.Infra.Dados.Comum
         #endregion Private methods
     }
 }
-

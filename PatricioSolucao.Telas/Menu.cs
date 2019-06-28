@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PatricioSolucao.Dominio;
+using PatricioSolucao.Infra.Dados;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,13 @@ namespace PatricioSolucao.Telas
 {
     public partial class Menu : Form
     {
+        private ImovelDao _imovelDao;
+        private List<Imovel> _listaImovel;
         public Menu()
         {
             InitializeComponent();
+            _imovelDao = new ImovelDao();
+            _listaImovel = new List<Imovel>();
         }
 
         private void imóvelToolStripMenuItem_Click(object sender, EventArgs e)
@@ -102,6 +108,44 @@ namespace PatricioSolucao.Telas
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void imoveisControl_Click(object sender, EventArgs e)
+        {
+            menuVender.Hide();
+        }
+
+        private void listarTodosImoveis_Click(object sender, EventArgs e)
+        {
+            _listaImovel.Clear();
+            _listaImovel = _imovelDao.BuscarImovelPorSituacao("0");
+            dvgListarLocar.DataSource = _listaImovel;
+        }
+
+        private void dvgListarVender_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void listarTodosImoveis2_Click(object sender, EventArgs e)
+        {
+            _listaImovel.Clear();
+            _listaImovel = _imovelDao.BuscarImovelPorSituacao("2");
+            dvgListarVender.DataSource = _listaImovel;
+        }
+
+        private void listarTodosImoveis3_Click(object sender, EventArgs e)
+        {
+            _listaImovel.Clear();
+            _listaImovel = _imovelDao.BuscarImovelPorSituacao("1");
+            dvgListarLocados.DataSource = _listaImovel;
+        }
+
+        private void listarTodosImoveis4_Click(object sender, EventArgs e)
+        {
+            _listaImovel.Clear();
+            _listaImovel = _imovelDao.BuscarImovelPorSituacao("3");
+            dvgListarVendidos.DataSource = _listaImovel;
         }
     }
 }

@@ -96,6 +96,13 @@ namespace PatricioSolucao.Infra.Dados
             return Db.Get(_sqlImovelProprietario, ConverterImovel, parms);
         }
 
+        public List<Imovel> BuscarImovelPorCpfProprietario(string id_proprietario)
+        {
+            var parms = new Dictionary<string, object> { { "id_proprietario", id_proprietario } };
+
+            return Db.GetAll(@"SELECT *, proprietario.cpf FROM imovel LEFT JOIN proprietario ON proprietario.id = imovel.id_proprietario WHERE proprietario.cpf LIKE '%%" + id_proprietario + "%'", ConverterImovel);
+        }
+
         public Imovel BuscarImovelPorId(int id)
         {
             var parms = new Dictionary<string, object> { { "id", id } };
@@ -103,11 +110,11 @@ namespace PatricioSolucao.Infra.Dados
             return Db.Get(_sqlImovelId, ConverterImovelAdicionar, parms);
         }
 
-        public Imovel BuscarImovelPorSituacao(string situacao)
+        public List<Imovel> BuscarImovelPorSituacao(string situacao)
         {
             var parms = new Dictionary<string, object> { { "situacao", situacao } };
 
-            return Db.Get(_sqlBuscarImovelPorSituacao, ConverterImovel, parms);
+            return Db.GetAll(_sqlBuscarImovelPorSituacao, ConverterImovel, parms);
         }
 
         public void Editar(Imovel imovel)

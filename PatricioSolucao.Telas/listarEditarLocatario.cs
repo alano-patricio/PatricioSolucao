@@ -16,14 +16,13 @@ namespace PatricioSolucao.Telas
     {
         private LocatarioDao _locatarioDao;
         private List<Locatario> _listaLocatario;
-        private object dgvListarProprietario;
 
         public listarEditarLocatario()
         {
             InitializeComponent();
             _listaLocatario = new List<Locatario>();
-            dgvListarProprietario.DataSource = _locatarioDao.BuscarLocatarioPeloCpf();
-            //dgvListarProprietario.DataSource = (List<Locatario>)_locatarioDao.BuscarLocatarioPeloCpf(); sugestão que não funcionou
+            _locatarioDao = new LocatarioDao();
+          
         }
 
         private void listarEditarLocatario_FormClosed(object sender, FormClosedEventArgs e)
@@ -34,20 +33,24 @@ namespace PatricioSolucao.Telas
 
         private void buscarLocatarioBuscar_Click(object sender, EventArgs e)
         {
+            var cpfBuscado = buscarLocatarioCpf.Text;
+            try
+            {
+                _listaLocatario.Clear();
+
+                _listaLocatario = _locatarioDao.BuscarLocatarioPeloCpfComLike(cpfBuscado);
+
+                dvgListarLocatario.DataSource = _listaLocatario;
+
+                buscarLocatarioCpf.Clear();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 
-        private void BuscaListaLocatario()
-        {
-
-            //Limpando a lista de contatos
-            _listaLocatario.Clear();
-
-            //Indo no banco e trazendo todos os contatos registrados.
-            _listaLocatario = (List<Locatario>)_locatarioDao.BuscarLocatarioPeloCpf();
-
-            //Adicionando a lista de contato no grid view.
-            dgvListarProprietario.DataSource = _listaLocatario;
-        }
     }
 }

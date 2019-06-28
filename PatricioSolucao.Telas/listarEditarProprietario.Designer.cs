@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.dgvListarProprietario = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buscarProprietarioBuscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buscarProprietarioCpf = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListarProprietario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,15 +42,17 @@
             this.dgvListarProprietario.Name = "dgvListarProprietario";
             this.dgvListarProprietario.Size = new System.Drawing.Size(657, 211);
             this.dgvListarProprietario.TabIndex = 29;
+            this.dgvListarProprietario.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvListarProprietario_MouseDoubleClick);
             // 
-            // button3
+            // buscarProprietarioBuscar
             // 
-            this.button3.Location = new System.Drawing.Point(231, 21);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 28;
-            this.button3.Text = "Buscar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buscarProprietarioBuscar.Location = new System.Drawing.Point(231, 21);
+            this.buscarProprietarioBuscar.Name = "buscarProprietarioBuscar";
+            this.buscarProprietarioBuscar.Size = new System.Drawing.Size(75, 23);
+            this.buscarProprietarioBuscar.TabIndex = 28;
+            this.buscarProprietarioBuscar.Text = "Buscar";
+            this.buscarProprietarioBuscar.UseVisualStyleBackColor = true;
+            this.buscarProprietarioBuscar.Click += new System.EventHandler(this.buscarProprietarioBuscar_Click);
             // 
             // label1
             // 
@@ -61,12 +63,12 @@
             this.label1.TabIndex = 27;
             this.label1.Text = "CPF Proprietário";
             // 
-            // textBox1
+            // buscarProprietarioCpf
             // 
-            this.textBox1.Location = new System.Drawing.Point(9, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(216, 20);
-            this.textBox1.TabIndex = 26;
+            this.buscarProprietarioCpf.Location = new System.Drawing.Point(9, 23);
+            this.buscarProprietarioCpf.Name = "buscarProprietarioCpf";
+            this.buscarProprietarioCpf.Size = new System.Drawing.Size(216, 20);
+            this.buscarProprietarioCpf.TabIndex = 26;
             // 
             // listarEditarProprietario
             // 
@@ -74,9 +76,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(681, 283);
             this.Controls.Add(this.dgvListarProprietario);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.buscarProprietarioBuscar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.buscarProprietarioCpf);
             this.Name = "listarEditarProprietario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listar Proprietários";
@@ -90,8 +92,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvListarProprietario;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buscarProprietarioBuscar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox buscarProprietarioCpf;
     }
 }
