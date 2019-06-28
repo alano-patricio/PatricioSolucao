@@ -57,11 +57,11 @@ namespace PatricioSolucao.Telas
         {
             int idSelecionado = (int)(dgvListarProprietario.CurrentRow.Cells["Id"].Value);
 
-            editarProprietario editarProprietario_ = new editarProprietario();
+            var enviaIdParaEdicacao = new editarProprietario(idSelecionado);
 
             this.Hide();
 
-            editarProprietario_.Show();
+            enviaIdParaEdicacao.Show();
 
         }
     }

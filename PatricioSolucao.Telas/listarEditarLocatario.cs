@@ -52,5 +52,15 @@ namespace PatricioSolucao.Telas
 
         }
 
+        private void dvgListarLocatario_DoubleClick(object sender, EventArgs e)
+        {
+            int idSelecionado = (int)(dvgListarLocatario.CurrentRow.Cells["Id"].Value);
+
+            var enviaIdParaEdicacao = new editarLocatario(idSelecionado);
+
+            this.Hide();
+
+            enviaIdParaEdicacao.Show();
+        }
     }
 }

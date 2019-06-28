@@ -42,6 +42,7 @@
             this.dvgListarLocatario.Name = "dvgListarLocatario";
             this.dvgListarLocatario.Size = new System.Drawing.Size(657, 211);
             this.dvgListarLocatario.TabIndex = 25;
+            this.dvgListarLocatario.DoubleClick += new System.EventHandler(this.dvgListarLocatario_DoubleClick);
             // 
             // buscarLocatarioBuscar
             // 

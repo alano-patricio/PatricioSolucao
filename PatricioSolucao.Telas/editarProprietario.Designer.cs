@@ -30,16 +30,16 @@
         {
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.editarProprietarioBanco = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.editarProprietarioRg = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.editarProprietarioCpf = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.editarProprietarioNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.editarProprietarioData = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // button3
@@ -60,12 +60,12 @@
             this.button2.Text = "Voltar";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // editarProprietarioBanco
             // 
-            this.textBox5.Location = new System.Drawing.Point(306, 76);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(430, 20);
-            this.textBox5.TabIndex = 31;
+            this.editarProprietarioBanco.Location = new System.Drawing.Point(306, 76);
+            this.editarProprietarioBanco.Name = "editarProprietarioBanco";
+            this.editarProprietarioBanco.Size = new System.Drawing.Size(430, 20);
+            this.editarProprietarioBanco.TabIndex = 31;
             // 
             // label5
             // 
@@ -76,13 +76,6 @@
             this.label5.TabIndex = 30;
             this.label5.Text = "Dados bancários";
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(12, 76);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(279, 20);
-            this.textBox4.TabIndex = 29;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -92,12 +85,12 @@
             this.label4.TabIndex = 28;
             this.label4.Text = "Data de nascimento";
             // 
-            // textBox3
+            // editarProprietarioRg
             // 
-            this.textBox3.Location = new System.Drawing.Point(529, 25);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(207, 20);
-            this.textBox3.TabIndex = 27;
+            this.editarProprietarioRg.Location = new System.Drawing.Point(529, 25);
+            this.editarProprietarioRg.Name = "editarProprietarioRg";
+            this.editarProprietarioRg.Size = new System.Drawing.Size(207, 20);
+            this.editarProprietarioRg.TabIndex = 27;
             // 
             // label3
             // 
@@ -108,12 +101,12 @@
             this.label3.TabIndex = 26;
             this.label3.Text = "RG";
             // 
-            // textBox2
+            // editarProprietarioCpf
             // 
-            this.textBox2.Location = new System.Drawing.Point(306, 25);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(207, 20);
-            this.textBox2.TabIndex = 25;
+            this.editarProprietarioCpf.Location = new System.Drawing.Point(306, 25);
+            this.editarProprietarioCpf.Name = "editarProprietarioCpf";
+            this.editarProprietarioCpf.Size = new System.Drawing.Size(207, 20);
+            this.editarProprietarioCpf.TabIndex = 25;
             // 
             // label2
             // 
@@ -124,12 +117,12 @@
             this.label2.TabIndex = 24;
             this.label2.Text = "CPF";
             // 
-            // textBox1
+            // editarProprietarioNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(279, 20);
-            this.textBox1.TabIndex = 23;
+            this.editarProprietarioNome.Location = new System.Drawing.Point(12, 25);
+            this.editarProprietarioNome.Name = "editarProprietarioNome";
+            this.editarProprietarioNome.Size = new System.Drawing.Size(279, 20);
+            this.editarProprietarioNome.TabIndex = 23;
             // 
             // label1
             // 
@@ -140,22 +133,30 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Nome";
             // 
+            // editarProprietarioData
+            // 
+            this.editarProprietarioData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.editarProprietarioData.Location = new System.Drawing.Point(12, 76);
+            this.editarProprietarioData.Name = "editarProprietarioData";
+            this.editarProprietarioData.Size = new System.Drawing.Size(279, 20);
+            this.editarProprietarioData.TabIndex = 34;
+            // 
             // editarProprietario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 184);
+            this.Controls.Add(this.editarProprietarioData);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.editarProprietarioBanco);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.editarProprietarioRg);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.editarProprietarioCpf);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.editarProprietarioNome);
             this.Controls.Add(this.label1);
             this.Name = "editarProprietario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -169,15 +170,15 @@
 
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox editarProprietarioBanco;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox editarProprietarioRg;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox editarProprietarioCpf;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox editarProprietarioNome;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker editarProprietarioData;
     }
 }
