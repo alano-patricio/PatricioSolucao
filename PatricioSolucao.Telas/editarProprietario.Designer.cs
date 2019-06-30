@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.editarProprietarioBanco = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,25 +38,8 @@
             this.editarProprietarioNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.editarProprietarioData = new System.Windows.Forms.DateTimePicker();
+            this.editarProprietarioAlterar = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(579, 153);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 33;
-            this.button3.Text = "Adicionar";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(661, 153);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "Voltar";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // editarProprietarioBanco
             // 
@@ -141,14 +122,24 @@
             this.editarProprietarioData.Size = new System.Drawing.Size(279, 20);
             this.editarProprietarioData.TabIndex = 34;
             // 
+            // editarProprietarioAlterar
+            // 
+            this.editarProprietarioAlterar.Location = new System.Drawing.Point(661, 153);
+            this.editarProprietarioAlterar.Name = "editarProprietarioAlterar";
+            this.editarProprietarioAlterar.Size = new System.Drawing.Size(75, 23);
+            this.editarProprietarioAlterar.TabIndex = 32;
+            this.editarProprietarioAlterar.Text = "Alterar";
+            this.editarProprietarioAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.editarProprietarioAlterar.UseVisualStyleBackColor = true;
+            this.editarProprietarioAlterar.Click += new System.EventHandler(this.editarProprietarioAlterar_Click);
+            // 
             // editarProprietario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 184);
             this.Controls.Add(this.editarProprietarioData);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.editarProprietarioAlterar);
             this.Controls.Add(this.editarProprietarioBanco);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -161,15 +152,13 @@
             this.Name = "editarProprietario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Proprietario";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.editarProprietario_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox editarProprietarioBanco;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -180,5 +169,6 @@
         private System.Windows.Forms.TextBox editarProprietarioNome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker editarProprietarioData;
+        private System.Windows.Forms.Button editarProprietarioAlterar;
     }
 }

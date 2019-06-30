@@ -39,8 +39,6 @@
             this.proprietáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.valoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.receitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuVender = new System.Windows.Forms.Button();
-            this.menuLocar = new System.Windows.Forms.Button();
             this.imoveisControl = new System.Windows.Forms.TabControl();
             this.listarTodosImoveis = new System.Windows.Forms.TabPage();
             this.dvgListarLocar = new System.Windows.Forms.DataGridView();
@@ -152,24 +150,6 @@
             this.receitaToolStripMenuItem.Text = "Valores";
             this.receitaToolStripMenuItem.Click += new System.EventHandler(this.receitaToolStripMenuItem_Click);
             // 
-            // menuVender
-            // 
-            this.menuVender.Location = new System.Drawing.Point(713, 415);
-            this.menuVender.Name = "menuVender";
-            this.menuVender.Size = new System.Drawing.Size(75, 23);
-            this.menuVender.TabIndex = 4;
-            this.menuVender.Text = "Vender";
-            this.menuVender.UseVisualStyleBackColor = true;
-            // 
-            // menuLocar
-            // 
-            this.menuLocar.Location = new System.Drawing.Point(713, 386);
-            this.menuLocar.Name = "menuLocar";
-            this.menuLocar.Size = new System.Drawing.Size(75, 23);
-            this.menuLocar.TabIndex = 6;
-            this.menuLocar.Text = "Locar";
-            this.menuLocar.UseVisualStyleBackColor = true;
-            // 
             // imoveisControl
             // 
             this.imoveisControl.Controls.Add(this.listarTodosImoveis);
@@ -179,7 +159,7 @@
             this.imoveisControl.Location = new System.Drawing.Point(13, 27);
             this.imoveisControl.Name = "imoveisControl";
             this.imoveisControl.SelectedIndex = 0;
-            this.imoveisControl.Size = new System.Drawing.Size(694, 411);
+            this.imoveisControl.Size = new System.Drawing.Size(784, 411);
             this.imoveisControl.TabIndex = 8;
             // 
             // listarTodosImoveis
@@ -187,7 +167,7 @@
             this.listarTodosImoveis.Controls.Add(this.dvgListarLocar);
             this.listarTodosImoveis.Location = new System.Drawing.Point(4, 22);
             this.listarTodosImoveis.Name = "listarTodosImoveis";
-            this.listarTodosImoveis.Size = new System.Drawing.Size(686, 385);
+            this.listarTodosImoveis.Size = new System.Drawing.Size(776, 385);
             this.listarTodosImoveis.TabIndex = 3;
             this.listarTodosImoveis.Text = "Imóveis p/ Locar";
             this.listarTodosImoveis.UseVisualStyleBackColor = true;
@@ -198,15 +178,16 @@
             this.dvgListarLocar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgListarLocar.Location = new System.Drawing.Point(3, 13);
             this.dvgListarLocar.Name = "dvgListarLocar";
-            this.dvgListarLocar.Size = new System.Drawing.Size(680, 369);
+            this.dvgListarLocar.Size = new System.Drawing.Size(765, 369);
             this.dvgListarLocar.TabIndex = 1;
+            this.dvgListarLocar.DoubleClick += new System.EventHandler(this.dvgListarLocar_DoubleClick);
             // 
             // listarTodosImoveis2
             // 
             this.listarTodosImoveis2.Controls.Add(this.dvgListarVender);
             this.listarTodosImoveis2.Location = new System.Drawing.Point(4, 22);
             this.listarTodosImoveis2.Name = "listarTodosImoveis2";
-            this.listarTodosImoveis2.Size = new System.Drawing.Size(686, 385);
+            this.listarTodosImoveis2.Size = new System.Drawing.Size(776, 385);
             this.listarTodosImoveis2.TabIndex = 0;
             this.listarTodosImoveis2.Text = "Imóveis p/ Vender";
             this.listarTodosImoveis2.UseVisualStyleBackColor = true;
@@ -217,16 +198,17 @@
             this.dvgListarVender.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgListarVender.Location = new System.Drawing.Point(3, 17);
             this.dvgListarVender.Name = "dvgListarVender";
-            this.dvgListarVender.Size = new System.Drawing.Size(680, 365);
+            this.dvgListarVender.Size = new System.Drawing.Size(765, 365);
             this.dvgListarVender.TabIndex = 0;
             this.dvgListarVender.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgListarVender_CellContentClick);
+            this.dvgListarVender.DoubleClick += new System.EventHandler(this.dvgListarVender_DoubleClick);
             // 
             // listarTodosImoveis3
             // 
             this.listarTodosImoveis3.Controls.Add(this.dvgListarLocados);
             this.listarTodosImoveis3.Location = new System.Drawing.Point(4, 22);
             this.listarTodosImoveis3.Name = "listarTodosImoveis3";
-            this.listarTodosImoveis3.Size = new System.Drawing.Size(686, 385);
+            this.listarTodosImoveis3.Size = new System.Drawing.Size(776, 385);
             this.listarTodosImoveis3.TabIndex = 1;
             this.listarTodosImoveis3.Text = "Imóveis Locados";
             this.listarTodosImoveis3.UseVisualStyleBackColor = true;
@@ -237,7 +219,7 @@
             this.dvgListarLocados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgListarLocados.Location = new System.Drawing.Point(3, 17);
             this.dvgListarLocados.Name = "dvgListarLocados";
-            this.dvgListarLocados.Size = new System.Drawing.Size(680, 365);
+            this.dvgListarLocados.Size = new System.Drawing.Size(765, 365);
             this.dvgListarLocados.TabIndex = 1;
             // 
             // listarTodosImoveis4
@@ -245,7 +227,7 @@
             this.listarTodosImoveis4.Controls.Add(this.dvgListarVendidos);
             this.listarTodosImoveis4.Location = new System.Drawing.Point(4, 22);
             this.listarTodosImoveis4.Name = "listarTodosImoveis4";
-            this.listarTodosImoveis4.Size = new System.Drawing.Size(686, 385);
+            this.listarTodosImoveis4.Size = new System.Drawing.Size(776, 385);
             this.listarTodosImoveis4.TabIndex = 2;
             this.listarTodosImoveis4.Text = "Imóveis Vendidos";
             this.listarTodosImoveis4.UseVisualStyleBackColor = true;
@@ -256,7 +238,7 @@
             this.dvgListarVendidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgListarVendidos.Location = new System.Drawing.Point(3, 17);
             this.dvgListarVendidos.Name = "dvgListarVendidos";
-            this.dvgListarVendidos.Size = new System.Drawing.Size(680, 365);
+            this.dvgListarVendidos.Size = new System.Drawing.Size(765, 365);
             this.dvgListarVendidos.TabIndex = 2;
             // 
             // Menu
@@ -265,8 +247,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(797, 450);
             this.Controls.Add(this.imoveisControl);
-            this.Controls.Add(this.menuLocar);
-            this.Controls.Add(this.menuVender);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -300,8 +280,6 @@
         private System.Windows.Forms.ToolStripMenuItem locatáriosToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem valoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem receitaToolStripMenuItem;
-        private System.Windows.Forms.Button menuVender;
-        private System.Windows.Forms.Button menuLocar;
         private System.Windows.Forms.TabControl imoveisControl;
         private System.Windows.Forms.TabPage listarTodosImoveis2;
         private System.Windows.Forms.DataGridView dvgListarVender;

@@ -49,6 +49,7 @@
             this.dvgListarImovel.Name = "dvgListarImovel";
             this.dvgListarImovel.Size = new System.Drawing.Size(738, 211);
             this.dvgListarImovel.TabIndex = 33;
+            this.dvgListarImovel.DoubleClick += new System.EventHandler(this.dvgListarImovel_DoubleClick);
             // 
             // buscarImovelBuscar
             // 

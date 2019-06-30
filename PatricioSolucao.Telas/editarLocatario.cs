@@ -38,5 +38,31 @@ namespace PatricioSolucao.Telas
             editarLocatarioAvalistaCpf.Text = _locatarioEncontrado.cpfAvalista;
             editarLocatarioAvalistaRenda.Text = _locatarioEncontrado.rendaAvalista.ToString();
         }
+
+        private void editarLocatarioAlterar_Click(object sender, EventArgs e)
+        {
+            Locatario locatario = new Locatario()
+            {
+                id = idSelecionado,
+                nome = editarLocatarioNome.Text,
+                cpf = editarLocatarioCpf.Text,
+                rg = editarLocatarioRg.Text,
+                dataNascimento = DateTime.Parse(editarLocatarioData.Text),
+                renda = float.Parse(editarLocatarioRenda.Text),
+                avalista = editarLocatarioAvalista.Checked,
+                nomeAvalista = editarLocatarioAvalistaNome.Text,
+                cpfAvalista = editarLocatarioAvalistaCpf.Text,
+                rendaAvalista = string.IsNullOrEmpty(editarLocatarioAvalistaRenda.Text) ? 0 : float.Parse(editarLocatarioAvalistaRenda.Text)
+            };
+            _locatarioDao.Editar(locatario);
+            MessageBox.Show("Locatario editado com sucesso!");
+            this.Close();
+        }
+
+        private void editarLocatario_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Menu Menu_ = new Menu();
+            Menu_.Show();
+        }
     }
 }

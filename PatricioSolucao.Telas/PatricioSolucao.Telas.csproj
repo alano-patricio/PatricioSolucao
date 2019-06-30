@@ -54,6 +54,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="buscarLocatarioComprador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buscarLocatarioComprador.Designer.cs">
+      <DependentUpon>buscarLocatarioComprador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="buscarLocatarioLocador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buscarLocatarioLocador.Designer.cs">
+      <DependentUpon>buscarLocatarioLocador.cs</DependentUpon>
+    </Compile>
     <Compile Include="cadastrarImovel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +152,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="buscarLocatarioComprador.resx">
+      <DependentUpon>buscarLocatarioComprador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buscarLocatarioLocador.resx">
+      <DependentUpon>buscarLocatarioLocador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="cadastrarImovel.resx">
       <DependentUpon>cadastrarImovel.cs</DependentUpon>
     </EmbeddedResource>

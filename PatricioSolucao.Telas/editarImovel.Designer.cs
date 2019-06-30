@@ -28,52 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.editarImovelAlterar = new System.Windows.Forms.Button();
+            this.editarImovelValor = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.editarImovelTipo = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.editarImovelObs = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.editarImovelRef = new System.Windows.Forms.TextBox();
+            this.editarImovelRua = new System.Windows.Forms.TextBox();
+            this.editarImovelNum = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.editarImovelBairro = new System.Windows.Forms.TextBox();
+            this.editarImovelProprietario = new System.Windows.Forms.TextBox();
+            this.editarImovelSituacao = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button3
+            // editarImovelAlterar
             // 
-            this.button3.Location = new System.Drawing.Point(610, 183);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 38;
-            this.button3.Text = "Adicionar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.editarImovelAlterar.Location = new System.Drawing.Point(691, 179);
+            this.editarImovelAlterar.Name = "editarImovelAlterar";
+            this.editarImovelAlterar.Size = new System.Drawing.Size(75, 23);
+            this.editarImovelAlterar.TabIndex = 38;
+            this.editarImovelAlterar.Text = "Alterar";
+            this.editarImovelAlterar.UseVisualStyleBackColor = true;
+            this.editarImovelAlterar.Click += new System.EventHandler(this.editarImovelAlterar_Click);
             // 
-            // button2
+            // editarImovelValor
             // 
-            this.button2.Location = new System.Drawing.Point(691, 183);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "Voltar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(569, 135);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(197, 20);
-            this.textBox7.TabIndex = 36;
+            this.editarImovelValor.Location = new System.Drawing.Point(569, 135);
+            this.editarImovelValor.Name = "editarImovelValor";
+            this.editarImovelValor.Size = new System.Drawing.Size(93, 20);
+            this.editarImovelValor.TabIndex = 36;
             // 
             // label8
             // 
@@ -84,16 +76,16 @@
             this.label8.TabIndex = 35;
             this.label8.Text = "Valor R$";
             // 
-            // comboBox1
+            // editarImovelTipo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.editarImovelTipo.FormattingEnabled = true;
+            this.editarImovelTipo.Items.AddRange(new object[] {
             "Locação",
             "Venda"});
-            this.comboBox1.Location = new System.Drawing.Point(433, 135);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 34;
+            this.editarImovelTipo.Location = new System.Drawing.Point(433, 135);
+            this.editarImovelTipo.Name = "editarImovelTipo";
+            this.editarImovelTipo.Size = new System.Drawing.Size(121, 21);
+            this.editarImovelTipo.TabIndex = 34;
             // 
             // label7
             // 
@@ -104,22 +96,6 @@
             this.label7.TabIndex = 33;
             this.label7.Text = "Tipo";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(339, 134);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(12, 136);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(307, 20);
-            this.textBox6.TabIndex = 31;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -129,12 +105,12 @@
             this.label6.TabIndex = 30;
             this.label6.Text = "Proprietário";
             // 
-            // textBox5
+            // editarImovelObs
             // 
-            this.textBox5.Location = new System.Drawing.Point(12, 76);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(754, 20);
-            this.textBox5.TabIndex = 29;
+            this.editarImovelObs.Location = new System.Drawing.Point(12, 76);
+            this.editarImovelObs.Name = "editarImovelObs";
+            this.editarImovelObs.Size = new System.Drawing.Size(754, 20);
+            this.editarImovelObs.TabIndex = 29;
             // 
             // label5
             // 
@@ -145,26 +121,26 @@
             this.label5.TabIndex = 28;
             this.label5.Text = "Observações";
             // 
-            // textBox4
+            // editarImovelRef
             // 
-            this.textBox4.Location = new System.Drawing.Point(610, 24);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(156, 20);
-            this.textBox4.TabIndex = 26;
+            this.editarImovelRef.Location = new System.Drawing.Point(610, 24);
+            this.editarImovelRef.Name = "editarImovelRef";
+            this.editarImovelRef.Size = new System.Drawing.Size(156, 20);
+            this.editarImovelRef.TabIndex = 26;
             // 
-            // textBox2
+            // editarImovelRua
             // 
-            this.textBox2.Location = new System.Drawing.Point(245, 24);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(216, 20);
-            this.textBox2.TabIndex = 25;
+            this.editarImovelRua.Location = new System.Drawing.Point(245, 24);
+            this.editarImovelRua.Name = "editarImovelRua";
+            this.editarImovelRua.Size = new System.Drawing.Size(216, 20);
+            this.editarImovelRua.TabIndex = 25;
             // 
-            // textBox3
+            // editarImovelNum
             // 
-            this.textBox3.Location = new System.Drawing.Point(485, 24);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 24;
+            this.editarImovelNum.Location = new System.Drawing.Point(485, 24);
+            this.editarImovelNum.Name = "editarImovelNum";
+            this.editarImovelNum.Size = new System.Drawing.Size(100, 20);
+            this.editarImovelNum.TabIndex = 24;
             // 
             // label3
             // 
@@ -202,40 +178,70 @@
             this.label4.TabIndex = 27;
             this.label4.Text = "Ponto de referência";
             // 
-            // textBox1
+            // editarImovelBairro
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(216, 20);
-            this.textBox1.TabIndex = 20;
+            this.editarImovelBairro.Location = new System.Drawing.Point(12, 24);
+            this.editarImovelBairro.Name = "editarImovelBairro";
+            this.editarImovelBairro.Size = new System.Drawing.Size(216, 20);
+            this.editarImovelBairro.TabIndex = 20;
+            // 
+            // editarImovelProprietario
+            // 
+            this.editarImovelProprietario.Location = new System.Drawing.Point(12, 136);
+            this.editarImovelProprietario.Name = "editarImovelProprietario";
+            this.editarImovelProprietario.Size = new System.Drawing.Size(415, 20);
+            this.editarImovelProprietario.TabIndex = 31;
+            // 
+            // editarImovelSituacao
+            // 
+            this.editarImovelSituacao.FormattingEnabled = true;
+            this.editarImovelSituacao.Items.AddRange(new object[] {
+            "Locar",
+            "Vender",
+            "Locado",
+            "Vendido"});
+            this.editarImovelSituacao.Location = new System.Drawing.Point(684, 134);
+            this.editarImovelSituacao.Name = "editarImovelSituacao";
+            this.editarImovelSituacao.Size = new System.Drawing.Size(77, 21);
+            this.editarImovelSituacao.TabIndex = 39;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(681, 113);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(49, 13);
+            this.label9.TabIndex = 42;
+            this.label9.Text = "Situação";
             // 
             // editarImovel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(773, 214);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.editarImovelSituacao);
+            this.Controls.Add(this.editarImovelAlterar);
+            this.Controls.Add(this.editarImovelValor);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.editarImovelTipo);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.editarImovelProprietario);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.editarImovelObs);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.editarImovelRef);
+            this.Controls.Add(this.editarImovelRua);
+            this.Controls.Add(this.editarImovelNum);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.editarImovelBairro);
             this.Name = "editarImovel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Imovel";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.editarImovel_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,25 +249,25 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button editarImovelAlterar;
+        private System.Windows.Forms.TextBox editarImovelValor;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox editarImovelTipo;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox editarImovelObs;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox editarImovelRef;
+        private System.Windows.Forms.TextBox editarImovelRua;
+        private System.Windows.Forms.TextBox editarImovelNum;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox editarImovelBairro;
+        private System.Windows.Forms.TextBox editarImovelProprietario;
+        private System.Windows.Forms.ComboBox editarImovelSituacao;
+        private System.Windows.Forms.Label label9;
     }
 }

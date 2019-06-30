@@ -21,6 +21,8 @@ namespace PatricioSolucao.Dominio
         public char situacao { get; set; }
         public int id_proprietario { get; set; }
         public int? id_locatario { get; set; }
+        public string nomeProprietario { get; set; }
+        public string nomeLocatario { get; set; }
 
         public void Validar()
         {

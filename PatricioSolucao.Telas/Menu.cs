@@ -112,11 +112,15 @@ namespace PatricioSolucao.Telas
 
         private void imoveisControl_Click(object sender, EventArgs e)
         {
-            menuVender.Hide();
+            // menuVender.Hide();
         }
 
         private void listarTodosImoveis_Click(object sender, EventArgs e)
         {
+            dvgListarLocar.DataSource = null;
+            dvgListarVender.DataSource = null;
+            dvgListarVendidos.DataSource = null;
+            dvgListarLocados.DataSource = null;
             _listaImovel.Clear();
             _listaImovel = _imovelDao.BuscarImovelPorSituacao("0");
             dvgListarLocar.DataSource = _listaImovel;
@@ -129,6 +133,10 @@ namespace PatricioSolucao.Telas
 
         private void listarTodosImoveis2_Click(object sender, EventArgs e)
         {
+            dvgListarLocar.DataSource = null;
+            dvgListarVender.DataSource = null;
+            dvgListarVendidos.DataSource = null;
+            dvgListarLocados.DataSource = null;
             _listaImovel.Clear();
             _listaImovel = _imovelDao.BuscarImovelPorSituacao("2");
             dvgListarVender.DataSource = _listaImovel;
@@ -136,6 +144,10 @@ namespace PatricioSolucao.Telas
 
         private void listarTodosImoveis3_Click(object sender, EventArgs e)
         {
+            dvgListarLocar.DataSource = null;
+            dvgListarVender.DataSource = null;
+            dvgListarVendidos.DataSource = null;
+            dvgListarLocados.DataSource = null;
             _listaImovel.Clear();
             _listaImovel = _imovelDao.BuscarImovelPorSituacao("1");
             dvgListarLocados.DataSource = _listaImovel;
@@ -143,9 +155,40 @@ namespace PatricioSolucao.Telas
 
         private void listarTodosImoveis4_Click(object sender, EventArgs e)
         {
+            dvgListarLocar.DataSource = null;
+            dvgListarVender.DataSource = null;
+            dvgListarVendidos.DataSource = null;
+            dvgListarLocados.DataSource = null;
             _listaImovel.Clear();
             _listaImovel = _imovelDao.BuscarImovelPorSituacao("3");
             dvgListarVendidos.DataSource = _listaImovel;
+        }
+
+        private void dvgListarLocar_DoubleClick(object sender, EventArgs e)
+        {
+            int idSelecionado = (int)(dvgListarLocar.CurrentRow.Cells["Id"].Value);
+
+            var enviaIdParaEdicacao = new buscarLocatarioLocador(idSelecionado);
+
+            this.Hide();
+            MessageBox.Show("Informe o CPF completo do locatario");
+            enviaIdParaEdicacao.Show();
+        }
+
+        private void dvgListarVender_DoubleClick(object sender, EventArgs e)
+        {
+            int idSelecionado = (int)(dvgListarVender.CurrentRow.Cells["Id"].Value);
+
+            var enviaIdParaCompra = new buscarLocatarioComprador(idSelecionado);
+
+            this.Hide();
+            MessageBox.Show("Informe o CPF completo do comprador");
+            enviaIdParaCompra.Show();
+        }
+
+        private void listarTodosImoveis_Leave(object sender, EventArgs e)
+        {
+            _listaImovel.Clear();
         }
     }
 }

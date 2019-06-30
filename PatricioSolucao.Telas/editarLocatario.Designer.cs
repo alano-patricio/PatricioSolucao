@@ -34,8 +34,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.editarLocatarioAvalistaNome = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.editarLocatarioAlterar = new System.Windows.Forms.Button();
             this.editarLocatarioRenda = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -97,23 +96,15 @@
             this.label8.TabIndex = 55;
             this.label8.Text = "Nome";
             // 
-            // button3
+            // editarLocatarioAlterar
             // 
-            this.button3.Location = new System.Drawing.Point(580, 169);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 54;
-            this.button3.Text = "Adicionar";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(661, 169);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 53;
-            this.button2.Text = "Voltar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.editarLocatarioAlterar.Location = new System.Drawing.Point(655, 163);
+            this.editarLocatarioAlterar.Name = "editarLocatarioAlterar";
+            this.editarLocatarioAlterar.Size = new System.Drawing.Size(75, 23);
+            this.editarLocatarioAlterar.TabIndex = 54;
+            this.editarLocatarioAlterar.Text = "Alterar";
+            this.editarLocatarioAlterar.UseVisualStyleBackColor = true;
+            this.editarLocatarioAlterar.Click += new System.EventHandler(this.editarLocatarioAlterar_Click);
             // 
             // editarLocatarioRenda
             // 
@@ -218,8 +209,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.editarLocatarioAvalistaNome);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.editarLocatarioAlterar);
             this.Controls.Add(this.editarLocatarioRenda);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -233,6 +223,7 @@
             this.Name = "editarLocatario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Locatario";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.editarLocatario_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,8 +237,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox editarLocatarioAvalistaNome;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button editarLocatarioAlterar;
         private System.Windows.Forms.TextBox editarLocatarioRenda;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
