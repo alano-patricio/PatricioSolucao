@@ -102,11 +102,11 @@
     <Compile Include="editarProprietario.Designer.cs">
       <DependentUpon>editarProprietario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Financeiro.cs">
+    <Compile Include="cadastrarFinanceiro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Financeiro.Designer.cs">
-      <DependentUpon>Financeiro.cs</DependentUpon>
+    <Compile Include="cadastrarFinanceiro.Designer.cs">
+      <DependentUpon>cadastrarFinanceiro.cs</DependentUpon>
     </Compile>
     <Compile Include="Sem Uso\listarBaixarImovel.cs">
       <SubType>Form</SubType>
@@ -176,8 +176,8 @@
     <EmbeddedResource Include="editarProprietario.resx">
       <DependentUpon>editarProprietario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Financeiro.resx">
-      <DependentUpon>Financeiro.cs</DependentUpon>
+    <EmbeddedResource Include="cadastrarFinanceiro.resx">
+      <DependentUpon>cadastrarFinanceiro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sem Uso\listarBaixarImovel.resx">
       <DependentUpon>listarBaixarImovel.cs</DependentUpon>

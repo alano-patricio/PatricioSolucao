@@ -94,16 +94,16 @@ namespace PatricioSolucao.Infra.Dados.Testes
         public void Teste_Deve_Editar_Qualquer_Campo_do_Imovel()
         {
             //CENÁRIO
-            int idImovelEditado = 1; 
-            int idLocatarioEditado = 1;
+            int idImovelEditado = 1;
+            string bairroEditado = "Teste EDITADO";
             Imovel imovelEditado = _imovelDao.BuscarImovelPorId(idImovelEditado);
 
             //AÇÃO
-            imovelEditado.id_locatario = idLocatarioEditado;
+            imovelEditado.bairro = bairroEditado;
             _imovelDao.Editar(imovelEditado);
 
             Imovel imovelBuscado = _imovelDao.BuscarImovelPorId(idImovelEditado);
-            Assert.AreEqual(idLocatarioEditado, imovelBuscado.id_locatario);
+            Assert.AreEqual(bairroEditado, imovelBuscado.bairro);
         }
 
         //[Test]

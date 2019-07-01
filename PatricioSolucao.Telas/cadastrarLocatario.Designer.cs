@@ -55,6 +55,7 @@
             this.cadastrarLocatarioAvalistaRenda.Name = "cadastrarLocatarioAvalistaRenda";
             this.cadastrarLocatarioAvalistaRenda.Size = new System.Drawing.Size(207, 20);
             this.cadastrarLocatarioAvalistaRenda.TabIndex = 9;
+            this.cadastrarLocatarioAvalistaRenda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cadastrarLocatarioAvalistaRenda_KeyPress);
             // 
             // label6
             // 
@@ -115,6 +116,7 @@
             this.cadastrarLocatarioRenda.Name = "cadastrarLocatarioRenda";
             this.cadastrarLocatarioRenda.Size = new System.Drawing.Size(207, 20);
             this.cadastrarLocatarioRenda.TabIndex = 4;
+            this.cadastrarLocatarioRenda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cadastrarLocatarioRenda_KeyPress);
             // 
             // label5
             // 

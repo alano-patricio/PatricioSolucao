@@ -66,6 +66,7 @@
             this.cadastrarImovelValor.Name = "cadastrarImovelValor";
             this.cadastrarImovelValor.Size = new System.Drawing.Size(114, 20);
             this.cadastrarImovelValor.TabIndex = 7;
+            this.cadastrarImovelValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cadastrarImovelValor_KeyPress);
             // 
             // label8
             // 
@@ -139,6 +140,7 @@
             this.cadastrarImovelNum.Name = "cadastrarImovelNum";
             this.cadastrarImovelNum.Size = new System.Drawing.Size(100, 20);
             this.cadastrarImovelNum.TabIndex = 2;
+            this.cadastrarImovelNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cadastrarImovelNum_KeyPress);
             // 
             // label3
             // 

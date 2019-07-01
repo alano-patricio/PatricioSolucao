@@ -39,18 +39,46 @@ namespace PatricioSolucao.Telas
 
         private void editarProprietarioAlterar_Click(object sender, EventArgs e)
         {
-            Proprietario proprietario = new Proprietario()
+            if (string.IsNullOrEmpty(editarProprietarioNome.Text))
             {
-                id = idSelecionado,
-                nome = editarProprietarioNome.Text,
-                cpf = editarProprietarioCpf.Text,
-                rg = editarProprietarioRg.Text,
-                dataNascimento = DateTime.Parse(editarProprietarioData.Text),
-                dadosBancarios = editarProprietarioBanco.Text
+                MessageBox.Show("Nome deve ser preenchido!");
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(editarProprietarioCpf.Text))
+                {
+                    MessageBox.Show("CPF deve ser preenchido!");
+                }
+                else
+                {
+                    if (string.IsNullOrEmpty(editarProprietarioRg.Text))
+                    {
+                        MessageBox.Show("RG deve ser preenchido!");
+                    }
+                    else
+                    {
+                        if (DateTime.Parse(editarProprietarioData.Text).Year > 2001)
+                        {
+                            MessageBox.Show("Proprietário deve ser maior de idade!");
+                        }
+                        else
+                        {
+                            Proprietario proprietario = new Proprietario()
+                            {
+                                id = idSelecionado,
+                                nome = editarProprietarioNome.Text,
+                                cpf = editarProprietarioCpf.Text,
+                                rg = editarProprietarioRg.Text,
+                                dataNascimento = DateTime.Parse(editarProprietarioData.Text),
+                                dadosBancarios = editarProprietarioBanco.Text
                             };
-            _proprietarioDao.Editar(proprietario);
-            MessageBox.Show("Proprietario editado com sucesso!");
-            this.Close();
+                            _proprietarioDao.Editar(proprietario);
+                            MessageBox.Show("Proprietario editado com sucesso!");
+                            this.Close();
+                        }
+                    }
+                }
+            }
         }
 
         private void editarProprietario_FormClosed(object sender, FormClosedEventArgs e)

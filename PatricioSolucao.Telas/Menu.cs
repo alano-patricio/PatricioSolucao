@@ -95,7 +95,7 @@ namespace PatricioSolucao.Telas
 
         private void receitaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Financeiro financeiro_ = new Financeiro();
+            cadastrarFinanceiro financeiro_ = new cadastrarFinanceiro();
             this.Hide();
             financeiro_.Show();
         }

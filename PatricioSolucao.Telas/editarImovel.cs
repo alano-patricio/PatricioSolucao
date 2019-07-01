@@ -78,23 +78,90 @@ namespace PatricioSolucao.Telas
                 situacaoAux = '3';
             }
 
-            Imovel imovel = new Imovel()
+            // -------------------------------------------------
+
+            if (string.IsNullOrEmpty(editarImovelBairro.Text))
             {
-                id = idSelecionado,
-                bairro = editarImovelBairro.Text,
-                rua = editarImovelRua.Text,
-                numero = int.Parse(editarImovelNum.Text),
-                pontoReferencia = editarImovelRef.Text,
-                observacoes = editarImovelObs.Text,
-                id_proprietario = _imovelEncontrado.id_proprietario,
-                valor = float.Parse(editarImovelValor.Text),
-                situacao = situacaoAux,
-                id_locatario = 1,
-                tipo = editarImovelTipo.Text == "Locação" ? false : true
-            };
-            _imovelDao.Editar(imovel);
-            MessageBox.Show("Imóvel alterado com sucesso!");
-            this.Close();
+                MessageBox.Show("Bairro precisa ser preenchido!");
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(editarImovelRua.Text))
+                {
+                    MessageBox.Show("Rua precisa ser preenchida!");
+                }
+                else
+                {
+                    if (string.IsNullOrEmpty(editarImovelNum.Text))
+                    {
+                        MessageBox.Show("Numero precisa ser preenchido!");
+                    }
+                    else
+                    {
+                        if (string.IsNullOrEmpty(editarImovelTipo.Text))
+                        {
+                            MessageBox.Show("Tipo precisa ser selecionado!");
+                        }
+                        else
+                        {
+                            if (string.IsNullOrEmpty(editarImovelValor.Text))
+                            {
+                                MessageBox.Show("Valor precisa ser preenchido!");
+                            }
+                            else
+                            {
+                                if (string.IsNullOrEmpty(editarImovelSituacao.Text))
+                                {
+                                    MessageBox.Show("Situação precisa ser selecionado!");
+                                }
+                                else
+                                {
+                                    Imovel imovel = new Imovel()
+                                    {
+                                        id = idSelecionado,
+                                        bairro = editarImovelBairro.Text,
+                                        rua = editarImovelRua.Text,
+                                        numero = int.Parse(editarImovelNum.Text),
+                                        pontoReferencia = editarImovelRef.Text,
+                                        observacoes = editarImovelObs.Text,
+                                        id_proprietario = _imovelEncontrado.id_proprietario,
+                                        valor = float.Parse(editarImovelValor.Text),
+                                        situacao = situacaoAux,
+                                        id_locatario = 1,
+                                        tipo = editarImovelTipo.Text == "Locação" ? false : true
+                                    };
+                                    _imovelDao.Editar(imovel);
+                                    MessageBox.Show("Imóvel alterado com sucesso!");
+                                    this.Close();
+                                                   
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void editarImovelNum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+
+            {
+
+                e.Handled = true;
+
+            }
+        }
+
+        private void editarImovelValor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+
+            {
+
+                e.Handled = true;
+
+            }
         }
     }
 }

@@ -66,6 +66,7 @@
             this.editarImovelValor.Name = "editarImovelValor";
             this.editarImovelValor.Size = new System.Drawing.Size(93, 20);
             this.editarImovelValor.TabIndex = 36;
+            this.editarImovelValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.editarImovelValor_KeyPress);
             // 
             // label8
             // 
@@ -141,6 +142,7 @@
             this.editarImovelNum.Name = "editarImovelNum";
             this.editarImovelNum.Size = new System.Drawing.Size(100, 20);
             this.editarImovelNum.TabIndex = 24;
+            this.editarImovelNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.editarImovelNum_KeyPress);
             // 
             // label3
             // 

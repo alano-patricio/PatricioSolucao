@@ -30,22 +30,101 @@ namespace PatricioSolucao.Telas
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Locatario locatario = new Locatario()
+            if (string.IsNullOrEmpty(cadastrarLocatarioNome.Text))
             {
-                nome = cadastrarLocatarioNome.Text,
-                cpf = cadastrarLocatarioCpf.Text,
-                rg = cadastrarLocatarioRg.Text,
-                dataNascimento = DateTime.Parse(cadastrarLocatarioData.Text),
-                renda = float.Parse(cadastrarLocatarioRenda.Text),
-                avalista = cadastrarLocatarioAvalista.Checked,
-                nomeAvalista = cadastrarLocatarioAvalistaNome.Text,
-                cpfAvalista = cadastrarLocatarioAvalistaCpf.Text,
-                rendaAvalista = string.IsNullOrEmpty(cadastrarLocatarioAvalistaRenda.Text) ? 0 : float.Parse(cadastrarLocatarioAvalistaRenda.Text)
-        };
-            _locatarioDao.Adicionar(locatario);
-            MessageBox.Show("Locatario cadastrado com sucesso!");
-            this.Close();
+                MessageBox.Show("Nome deve ser preenchido!");
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(cadastrarLocatarioCpf.Text))
+                {
+                    MessageBox.Show("CPF deve ser preenchido!");
+                }
+                else
+                {
+                    if (string.IsNullOrEmpty(cadastrarLocatarioRg.Text))
+                    {
+                        MessageBox.Show("RG deve ser preenchido!");
+                    }
+                    else
+                    {
+                        if (DateTime.Parse(cadastrarLocatarioData.Text).Year > 2001)
+                        {
+                            MessageBox.Show("Locatario deve ser maior de idade!");
+                        }
+                        else
+                        {
+                            if (string.IsNullOrEmpty(cadastrarLocatarioRenda.Text))
+                            {
+                                MessageBox.Show("Renda deve ser preenchido!");
+                            }
+                            else
+                            {
+                                if (cadastrarLocatarioAvalista.Checked)
+                                {
+                                    if (string.IsNullOrEmpty(cadastrarLocatarioAvalistaNome.Text))
+                                    {
+                                        MessageBox.Show("Nome do avalista deve ser preenchido!");
+                                    }
+                                    else
+                                    {
+                                        if (string.IsNullOrEmpty(cadastrarLocatarioAvalistaCpf.Text))
+                                        {
+                                            MessageBox.Show("CPF do avalista deve ser preenchido!");
+                                        }
+                                        else
+                                        {
+                                            if (string.IsNullOrEmpty(cadastrarLocatarioAvalistaRenda.Text))
+                                            {
+                                                MessageBox.Show("Rendo do avalista deve ser preenchido!");
+                                            }
+                                            else
+                                            {
+                                                Locatario locatario = new Locatario()
+                                                {
+                                                    nome = cadastrarLocatarioNome.Text,
+                                                    cpf = cadastrarLocatarioCpf.Text,
+                                                    rg = cadastrarLocatarioRg.Text,
+                                                    dataNascimento = DateTime.Parse(cadastrarLocatarioData.Text),
+                                                    renda = float.Parse(cadastrarLocatarioRenda.Text),
+                                                    avalista = cadastrarLocatarioAvalista.Checked,
+                                                    nomeAvalista = cadastrarLocatarioAvalistaNome.Text,
+                                                    cpfAvalista = cadastrarLocatarioAvalistaCpf.Text,
+                                                    rendaAvalista = float.Parse(cadastrarLocatarioAvalistaRenda.Text)
+                                                };
+                                                _locatarioDao.Adicionar(locatario);
+                                                MessageBox.Show("Locatario cadastrado com sucesso!");
+                                                this.Close();
+                                            }
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    Locatario locatario = new Locatario()
+                                    {
+                                        nome = cadastrarLocatarioNome.Text,
+                                        cpf = cadastrarLocatarioCpf.Text,
+                                        rg = cadastrarLocatarioRg.Text,
+                                        dataNascimento = DateTime.Parse(cadastrarLocatarioData.Text),
+                                        renda = float.Parse(cadastrarLocatarioRenda.Text),
+                                        avalista = cadastrarLocatarioAvalista.Checked,
+                                        nomeAvalista = cadastrarLocatarioAvalistaNome.Text,
+                                        cpfAvalista = cadastrarLocatarioAvalistaCpf.Text,
+                                        rendaAvalista = string.IsNullOrEmpty(cadastrarLocatarioAvalistaRenda.Text) ? 0 : float.Parse(cadastrarLocatarioAvalistaRenda.Text)
+                                    };
+                                    _locatarioDao.Adicionar(locatario);
+                                    MessageBox.Show("Locatario cadastrado com sucesso!");
+                                    this.Close();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
+
+       
 
         private void cadastrarLocatarioAvalista_CheckedChanged(object sender, EventArgs e)
         {
@@ -60,6 +139,31 @@ namespace PatricioSolucao.Telas
                 cadastrarLocatarioAvalistaNome.Enabled = false;
                 cadastrarLocatarioAvalistaCpf.Enabled = false;
                 cadastrarLocatarioAvalistaRenda.Enabled = false;
+                cadastrarLocatarioAvalistaNome.Clear();
+                cadastrarLocatarioAvalistaCpf.Clear();
+                cadastrarLocatarioAvalistaRenda.Clear();
+            }
+        }
+
+        private void cadastrarLocatarioRenda_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+
+            {
+
+                e.Handled = true;
+
+            }
+        }
+
+        private void cadastrarLocatarioAvalistaRenda_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+
+            {
+
+                e.Handled = true;
+
             }
         }
     }

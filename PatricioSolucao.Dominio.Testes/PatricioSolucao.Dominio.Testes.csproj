@@ -52,6 +52,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FinanceiroTestes.cs" />
     <Compile Include="ImovelTestes.cs" />
     <Compile Include="LocatarioTestes.cs" />
     <Compile Include="ProprietarioTestes.cs" />

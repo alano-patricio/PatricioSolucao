@@ -54,6 +54,7 @@
             this.editarLocatarioAvalistaRenda.Name = "editarLocatarioAvalistaRenda";
             this.editarLocatarioAvalistaRenda.Size = new System.Drawing.Size(207, 20);
             this.editarLocatarioAvalistaRenda.TabIndex = 60;
+            this.editarLocatarioAvalistaRenda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.editarLocatarioAvalistaRenda_KeyPress);
             // 
             // label6
             // 
@@ -112,6 +113,7 @@
             this.editarLocatarioRenda.Name = "editarLocatarioRenda";
             this.editarLocatarioRenda.Size = new System.Drawing.Size(207, 20);
             this.editarLocatarioRenda.TabIndex = 52;
+            this.editarLocatarioRenda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.editarLocatarioRenda_KeyPress);
             // 
             // label5
             // 
@@ -172,6 +174,7 @@
             this.editarLocatarioAvalista.TabIndex = 44;
             this.editarLocatarioAvalista.Text = "Avalista";
             this.editarLocatarioAvalista.UseVisualStyleBackColor = true;
+            this.editarLocatarioAvalista.CheckedChanged += new System.EventHandler(this.editarLocatarioAvalista_CheckedChanged);
             // 
             // editarLocatarioNome
             // 

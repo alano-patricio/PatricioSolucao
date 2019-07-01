@@ -1,6 +1,6 @@
 ﻿namespace PatricioSolucao.Telas
 {
-    partial class Financeiro
+    partial class cadastrarFinanceiro
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.cadastrarFinanceiroValor = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.cadastrarFinanceiroBalanco = new System.Windows.Forms.TextBox();
+            this.cadastrarFinanceiroOperacao = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -47,14 +47,6 @@
             this.label1.Text = "Balanço";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(295, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(148, 20);
-            this.textBox1.TabIndex = 1;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -64,32 +56,23 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Valor";
             // 
-            // textBox2
+            // cadastrarFinanceiroValor
             // 
-            this.textBox2.Location = new System.Drawing.Point(15, 23);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(148, 20);
-            this.textBox2.TabIndex = 3;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Items.AddRange(new object[] {
-            "Crédito",
-            "Debito"});
-            this.listBox1.Location = new System.Drawing.Point(169, 25);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 17);
-            this.listBox1.TabIndex = 4;
+            this.cadastrarFinanceiroValor.Location = new System.Drawing.Point(15, 23);
+            this.cadastrarFinanceiroValor.Name = "cadastrarFinanceiroValor";
+            this.cadastrarFinanceiroValor.Size = new System.Drawing.Size(148, 20);
+            this.cadastrarFinanceiroValor.TabIndex = 0;
+            this.cadastrarFinanceiroValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cadastrarFinanceiroValor_KeyPress);
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(15, 49);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(428, 23);
-            this.button1.TabIndex = 5;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Processar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -100,19 +83,37 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Operação";
             // 
-            // Financeiro
+            // cadastrarFinanceiroBalanco
+            // 
+            this.cadastrarFinanceiroBalanco.Location = new System.Drawing.Point(295, 23);
+            this.cadastrarFinanceiroBalanco.Name = "cadastrarFinanceiroBalanco";
+            this.cadastrarFinanceiroBalanco.Size = new System.Drawing.Size(148, 20);
+            this.cadastrarFinanceiroBalanco.TabIndex = 7;
+            // 
+            // cadastrarFinanceiroOperacao
+            // 
+            this.cadastrarFinanceiroOperacao.FormattingEnabled = true;
+            this.cadastrarFinanceiroOperacao.Items.AddRange(new object[] {
+            "Credito",
+            "Debito"});
+            this.cadastrarFinanceiroOperacao.Location = new System.Drawing.Point(169, 23);
+            this.cadastrarFinanceiroOperacao.Name = "cadastrarFinanceiroOperacao";
+            this.cadastrarFinanceiroOperacao.Size = new System.Drawing.Size(120, 21);
+            this.cadastrarFinanceiroOperacao.TabIndex = 1;
+            // 
+            // cadastrarFinanceiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(452, 81);
+            this.Controls.Add(this.cadastrarFinanceiroOperacao);
+            this.Controls.Add(this.cadastrarFinanceiroBalanco);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.cadastrarFinanceiroValor);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Name = "Financeiro";
+            this.Name = "cadastrarFinanceiro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Balanço";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Financeiro_FormClosed);
@@ -124,11 +125,11 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TextBox cadastrarFinanceiroValor;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox cadastrarFinanceiroBalanco;
+        private System.Windows.Forms.ComboBox cadastrarFinanceiroOperacao;
     }
 }

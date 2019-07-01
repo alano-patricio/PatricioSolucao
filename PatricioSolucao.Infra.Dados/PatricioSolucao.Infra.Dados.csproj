@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Comum\Db.cs" />
+    <Compile Include="FinanceiroDao.cs" />
     <Compile Include="ImovelDao.cs" />
     <Compile Include="LocatarioDao.cs" />
     <Compile Include="ProprietarioDao.cs" />
