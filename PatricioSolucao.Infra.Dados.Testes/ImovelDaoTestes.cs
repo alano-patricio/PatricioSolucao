@@ -106,41 +106,41 @@ namespace PatricioSolucao.Infra.Dados.Testes
             Assert.AreEqual(bairroEditado, imovelBuscado.bairro);
         }
 
-        //[Test]
-        //public void Teste_Deve_Listar_Imovel_Para_Locar()
-        //{
-        //    //CENÁRIO
-        //    string situacaoImovel = "0";
-        //    Imovel resultado = _imovelDao.BuscarImovelPorSituacao(situacaoImovel);
-        //    Assert.NotNull(resultado);
-        //}
+        [Test]
+        public void Teste_Deve_Listar_Imovel_Para_Locar()
+        {
+            //CENÁRIO
+            string situacaoImovel = "0";
+            Imovel resultado = _imovelDao.BuscarImovelPorSituacaoEspecifica(situacaoImovel);
+            Assert.NotNull(resultado);
+        }
 
-        //[Test]
-        //public void Teste_Deve_Listar_Imovel_Locado()
-        //{
-        //    //CENÁRIO
-        //    string situacaoImovel = "1";
-        //    Imovel resultado = _imovelDao.BuscarImovelPorSituacao(situacaoImovel);
-        //    Assert.NotNull(resultado);
-        //}
+        [Test]
+        public void Teste_Deve_Listar_Imovel_Locado()
+        {
+            //CENÁRIO
+            string situacaoImovel = "1";
+            Imovel resultado = _imovelDao.BuscarImovelPorSituacaoEspecifica(situacaoImovel);
+            Assert.NotNull(resultado);
+        }
 
-        //[Test]
-        //public void Teste_Deve_Listar_Imovel_Para_Vender()
-        //{
-        //    //CENÁRIO
-        //    string situacaoImovel = "2";
-        //    Imovel resultado = _imovelDao.BuscarImovelPorSituacao(situacaoImovel);
-        //    Assert.NotNull(resultado);
-        //}
+        [Test]
+        public void Teste_Deve_Listar_Imovel_Para_Vender()
+        {
+            //CENÁRIO
+            string situacaoImovel = "2";
+            Imovel resultado = _imovelDao.BuscarImovelPorSituacaoEspecifica(situacaoImovel);
+            Assert.NotNull(resultado);
+        }
 
-        //[Test]
-        //public void Teste_Deve_Listar_Imovel_Vendido()
-        //{
-        //    //CENÁRIO
-        //    string situacaoImovel = "3";
-        //    Imovel resultado = _imovelDao.BuscarImovelPorSituacao(situacaoImovel);
-        //    Assert.NotNull(resultado);
-        //}
+        [Test]
+        public void Teste_Deve_Listar_Imovel_Vendido()
+        {
+            //CENÁRIO
+            string situacaoImovel = "3";
+            Imovel resultado = _imovelDao.BuscarImovelPorSituacaoEspecifica(situacaoImovel);
+            Assert.NotNull(resultado);
+        }
 
 
 

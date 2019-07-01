@@ -52,6 +52,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FinanceiroDaoTestes.cs" />
     <Compile Include="ImovelDaoTestes.cs" />
     <Compile Include="LocatarioDaoTestes.cs" />
     <Compile Include="ObjetoBase.cs" />

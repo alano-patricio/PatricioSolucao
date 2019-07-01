@@ -111,7 +111,13 @@ namespace PatricioSolucao.Infra.Dados
             return Db.GetAll(@"SELECT imovel.id, imovel.id_locatario, imovel.id_proprietario, imovel.bairro, imovel.rua, imovel.numero, imovel.pontoReferencia, imovel.observacoes, imovel.tipo, imovel.valor, imovel.situacao, proprietario.nome AS nomeProprietario, locatario.nome AS nomeLocatario FROM imovel LEFT JOIN proprietario ON proprietario.id = imovel.id_proprietario LEFT JOIN locatario ON locatario.id = imovel.id_locatario WHERE imovel.situacao ='" + situacao + "'", ConverterImovelSituacao);
         }
 
-        public void Editar(Imovel imovel)
+        public Imovel BuscarImovelPorSituacaoEspecifica(string situacao)
+        {
+            var parms = new Dictionary<string, object> { { "situacao", situacao } };
+
+            return Db.Get(@"SELECT imovel.id, imovel.id_locatario, imovel.id_proprietario, imovel.bairro, imovel.rua, imovel.numero, imovel.pontoReferencia, imovel.observacoes, imovel.tipo, imovel.valor, imovel.situacao, proprietario.nome AS nomeProprietario, locatario.nome AS nomeLocatario FROM imovel LEFT JOIN proprietario ON proprietario.id = imovel.id_proprietario LEFT JOIN locatario ON locatario.id = imovel.id_locatario WHERE imovel.situacao ='" + situacao + "'", ConverterImovelSituacao);
+        }
+            public void Editar(Imovel imovel)
         {
             Db.Update(_sqlEditar, BuscarParametrosAdicionar(imovel));
         }

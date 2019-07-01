@@ -16,9 +16,25 @@
 CREATE DATABASE IF NOT EXISTS `ImobiliariaPatricio` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 USE `ImobiliariaPatricio`;
 
+-- Copiando estrutura para tabela ImobiliariaPatricio.financeiro
+CREATE TABLE IF NOT EXISTS `financeiro` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `valor` bigint(20) NOT NULL DEFAULT '0',
+  `operacao` bit(1) NOT NULL DEFAULT b'0',
+  `balanco` bigint(20) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+
+-- Copiando dados para a tabela ImobiliariaPatricio.financeiro: ~2 rows (aproximadamente)
+/*!40000 ALTER TABLE `financeiro` DISABLE KEYS */;
+INSERT INTO `financeiro` (`id`, `valor`, `operacao`, `balanco`) VALUES
+	(1, 500, b'0', 1000),
+	(2, 300, b'1', 1000);
+/*!40000 ALTER TABLE `financeiro` ENABLE KEYS */;
+
 -- Copiando estrutura para tabela ImobiliariaPatricio.imovel
 CREATE TABLE IF NOT EXISTS `imovel` (
-  `id` tinyint(1) NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `bairro` varchar(50) NOT NULL,
   `rua` varchar(50) NOT NULL,
   `numero` int(11) NOT NULL,
@@ -27,8 +43,8 @@ CREATE TABLE IF NOT EXISTS `imovel` (
   `tipo` bit(1) NOT NULL,
   `valor` float NOT NULL,
   `situacao` char(1) NOT NULL,
-  `id_proprietario` tinyint(1) NOT NULL,
-  `id_locatario` tinyint(1) DEFAULT NULL,
+  `id_proprietario` bigint(20) NOT NULL,
+  `id_locatario` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `id_proprietario` (`id_proprietario`),
   KEY `id_locatario` (`id_locatario`),
@@ -42,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `imovel` (
 
 -- Copiando estrutura para tabela ImobiliariaPatricio.locatario
 CREATE TABLE IF NOT EXISTS `locatario` (
-  `id` tinyint(1) NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `nome` varchar(70) NOT NULL DEFAULT '0',
   `cpf` varchar(14) NOT NULL DEFAULT '0',
   `rg` varchar(9) NOT NULL DEFAULT '0',
@@ -51,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `locatario` (
   `avalista` bit(1) DEFAULT NULL,
   `nomeAvalista` varchar(70) DEFAULT NULL,
   `cpfAvalista` varchar(14) DEFAULT NULL,
-  `rendaAvalista` float DEFAULT NULL,
+  `rendaAvalista` float DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
@@ -63,7 +79,7 @@ INSERT INTO `locatario` (`id`, `nome`, `cpf`, `rg`, `data`, `renda`, `avalista`,
 
 -- Copiando estrutura para tabela ImobiliariaPatricio.proprietario
 CREATE TABLE IF NOT EXISTS `proprietario` (
-  `id` tinyint(1) NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `nome` varchar(50) NOT NULL,
   `cpf` varchar(14) NOT NULL,
   `rg` varchar(9) NOT NULL,
